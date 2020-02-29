@@ -6,20 +6,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <title>Aneja Lab</title>
 </head>
 
 <body id="home" class="scrollspy">
     <!-- Navbar -->
     <div class="navbar-fixed">
-        <nav class="light-blue darken-2">
+        <nav class="yale-blue-background">
             <div class="container">
                 <div class="nav-wrapper">
                     <a class="flow-text" href="../index.html">Aneja Lab</a>
@@ -31,7 +30,7 @@
                             <a href="../index.html#welcome">Home</a>
                         </li>
                         <li class="active">
-                            <a href="./">Our Team</a>
+                            <a href="./">People</a>
                         </li>
                         <li>
                             <a href="../research">Our Research</a>
@@ -52,7 +51,7 @@
             <a href="../index.html#welcome">Home</a>
         </li>
         <li class="active">
-            <a href="./">Our Team</a>
+            <a href="./">People</a>
         </li>
         <li>
             <a href="../research">Our Research</a>
@@ -69,7 +68,7 @@
     <section class="slider">
         <ul class="slides">
             <li>
-                <img src="../img/Website_Banner.jpeg">
+                <img src="../img/Website_Banner.jpeg" height=50%>
             </li>
         </ul>
     </section>
@@ -78,7 +77,7 @@
     <section id="team" class="section section-team scrollspy">
         <div class="container">
             <h4 class="center">
-                <span class="light-blue-text darken-2">Our</span> Team
+                People
             </h4>
             <div class="row">
                 <div class="col s12 l8 offset-l2">
@@ -86,8 +85,8 @@
                         <div class="card-image">
                             <img src="../img/Headshots/Sanjay_Aneja.jpeg" width=225px height=225px alt="Sanjay Aneja" style="margin-bottom: 10px">
                             <div class="center-align" style="margin-bottom: 10px">
-                                <a class="waves-effect waves-light btn light-blue darken-2" href="mailto:sanjay.aneja@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn light-blue darken-2" href="https://github.com/sanjayaneja" target="_blank"><i class="fab fa-github"></i> &nbsp; Github</a>
+                                <a class="waves-effect waves-light btn yale-blue-background" href="mailto:sanjay.aneja@yale.edu">Email</a>
+                                <a class="waves-effect waves-light btn yale-blue-background" href="https://github.com/sanjayaneja" target="_blank"><i class="fab fa-github"></i> &nbsp; Github</a>
                             </div>
                         </div>
                         <div class="card-stacked">
@@ -306,7 +305,7 @@
     <section id="contact" class="section section-contact grey lighten-4 scrollspy">
         <div class="container">
         <h4 class="center">
-            <span class="light-blue-text darken-2">Our</span> Contact Information
+            <span class="yale-blue-text">Our</span> Contact Information
         </h4>
         <div class="row">
             <div class="col s12 m6">
@@ -332,7 +331,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="section light-blue darken-2 white-text center">
+    <footer class="section yale-blue-background white-text center">
         <p>35 Park St, New Haven, CT 06511</p>
         <p class="flow-text">Aneja Lab &copy; 2020 </p>
     </footer>
@@ -349,7 +348,7 @@
         const slider = document.querySelector('.slider');
         M.Slider.init(slider, {
             indicators: false,
-            height: 500,
+            height: 300,
             transition: 500,
             interval: 6000
         });

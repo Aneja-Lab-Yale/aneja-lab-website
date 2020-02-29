@@ -12,3 +12,11 @@
 html {
   font-family: Palatino;
 }
+
+.yale-blue-background {
+  background-color: #00356B !important;
+}
+
+.yale-blue-text {
+  color: #00356B !important;
+}
