@@ -20,3 +20,7 @@ html {
 .yale-blue-text {
   color: #00356B !important;
 }
+
+.person-image {
+  margin: 10px auto 10px;
+}
