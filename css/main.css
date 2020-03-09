@@ -30,12 +30,13 @@ html {
 }
 
 .people-text {
+  margin-top: 5px;
   font-size: 18px;
 }
 
 nav.nav-center {
-  line-height: 32px;
-  height: 32px;
+  line-height: 36px;
+  height: 36px;
 }
 
 nav.nav-center ul {
@@ -49,6 +50,7 @@ nav.nav-center ul li {
 
 nav.nav-center ul li a {
   display: inline-block;
+  font-size: 24px;
 }
 
 nav .sidenav-trigger i {
