@@ -25,6 +25,14 @@ html {
   margin: 10px auto 10px;
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
+.people-text {
+  font-size: 18px;
+}
+
 .bg-img {
   /* The image used */
   background-image: url("../img/New_Website_Banner.png");
