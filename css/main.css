@@ -22,7 +22,12 @@ html {
 }
 
 .person-image {
-  margin: 10px auto 10px;
+  margin: auto;
+}
+
+.person-image-card {
+  padding-left: 2rem;
+  margin: auto;
 }
 
 .bold-text {
