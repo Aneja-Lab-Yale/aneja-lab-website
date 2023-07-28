@@ -1,15 +1,15 @@
-from git import Repo
-import os
+# from git import Repo
+# import os
 
-path = '/mdew192837/aneja-lab-website'
-if not os.path.exists(path):
-    os.makedirs(path)
+# path = '/mdew192837/aneja-lab-website'
+# if not os.path.exists(path):
+#     os.makedirs(path)
 
-os.chdir(path)
+# os.chdir(path)
 
-repo = Repo.init(path).git
+# repo = Repo.init(path).git
 
-index = Repo.init(path).index
+# index = Repo.init(path).index
 
 import requests
 from bs4 import BeautifulSoup
@@ -54,6 +54,14 @@ dataF = open("publicationsListData.txt", "w")
 for i in range(test):
     dataF.write(f"{pubTitlesList[i]} | {str(pubAuthorsList[i])} | {pubDatesList[i]}\n")
 
-repo.commit('-m', 'auto publications update', author='NMakin-TCAM <neevmakin@gmail.com>')
+# index.pull()
+# repo.commit("-m", "auto publications update", author="NMakin-TCAM <neevmakin@gmail.com>")
+# index.push()
+
+# repo.add(update=True)
+# index.commit("auto publications update")
+# origin = repo.remote(name="dev")
+# origin.push()
+
 
 dataF.close()
