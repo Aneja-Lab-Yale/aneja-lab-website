@@ -14,45 +14,68 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <!-- For Custom Font (Yale Type Face) -->
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+    <style>
+        /* Custom CSS for the header */
+        .header-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .header-image {
+            max-height: 300px; /* Adjust this value as needed */
+            width: auto;
+            
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 25px; /* Adjust this value for the desired space from the bottom */
+            left: 55%; /* Adjust this value for the desired space from the right */
+            background-color: #003366; /* Yale Blue background color */
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px; /* Adjust this value for the desired height */
+        }
+
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation li {
+            margin: 0;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+    </style>
     <title>Aneja Lab</title>
 </head>
 
 <body id="home" class="scrollspy">
     <!-- Navbar -->
-    <div class="yale-blue-background">
-        <img class="responsive-img" src="../img/New_Website_Banner.png" alt="">
-        <nav class="yale-blue-background nav-center">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                        <i class="material-icons">menu</i>
-                    </a>
-                    <ul class="hide-on-med-and-down">
-                        <li>
-                            <a href="../index.html#welcome">Home</a>
-                        </li>
-                        <li class="active">
-                            <a href="./">People</a>
-                        </li>
-                        <li>
-                            <a href="../projects">Projects</a>
-                        </li>
-                        <li>
-                            <a href="../publications">Publications</a>
-                        </li>
-                        <li>
-                            <a href="../journal-club">Journal Club</a>
-                        </li>
-                        <li>
-                            <a href="../join">Join Us</a>
-                        </li>
-                        <li>
-                            <a href="../support">Support</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <div class="yale-blue-background header-container">
+        <img class="responsive-img header-image" src="../img/New_Website_Banner.png" alt="">
+        <div class="navigation">
+            <ul>
+                <li><a href="../index.html#welcome">Home</a></li>
+                <li class="active"><a href="./">People</a></li>
+                <li><a href="../projects">Projects</a></li>
+                <li><a href="../publications">Publications</a></li>
+                <li><a href="../journal-club">News</a></li>
+                <li><a href="../join">Contact</a></li>
+                <li><a href="../support">Support</a></li>
+            </ul>
+        </div>
     </div>
     <ul class="sidenav" id="mobile-nav">
         <li>
@@ -68,10 +91,10 @@
             <a href="../publications">Publications</a>
         </li>
         <li>
-            <a href="../journal-club">Journal Club</a>
+            <a href="../journal-club">News</a>
         </li>
         <li>
-            <a href="../join">Join Us</a>
+            <a href="../join">Contact</a>
         </li>
         <li>
             <a href="../support">Support</a>
@@ -83,8 +106,9 @@
         <div class="container">
             <h4>
                 People
+                <hr class="col s12 l6 offset-l3">
             </h4>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col s12 hide-on-small-only">
                     <div class="card horizontal hoverable">
                         <div class="card-image center person-image-card">
@@ -102,6 +126,9 @@
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
                                             href="https://github.com/sanjayaneja" target="_blank"><i
                                                 class="fab fa-github"></i> &nbsp; Github</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                        href="https://twitter.com/SanjayAnejaMD" target="_blank"><i
+                                            class="fab fa-github"></i> &nbsp; Twitter</a>
                                     </div>
                                 </div>
                                 <div class="col l3">
@@ -139,1049 +166,735 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img class="hide-on-small-only" src="../img/Headshots/Sachin_Umrao.jpeg" width=175px
-                                height=175px alt="Sachin Umrao">
-                            <img class="hide-on-med-and-up" src="../img/Headshots/Sachin_Umrao.jpeg" width=100px
-                                height=100px alt="Sachin Umrao">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Sanjay_Aneja.jpeg" width="100%" height="100%" alt="Sanjay Aneja">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Sachin Umrao</p>
-                                    <p class="flow-text bold-text hide-on-med-and-up" style="font-weight: bold;">Sachin
-                                        Umrao</p>
-                                    <p class="people-text">Postdoctoral Fellow</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Sanjay Aneja, MD</p>
+                                        <p class="people-text">Principal Investigator</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:sanjay.aneja@yale.edu">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/sanjayaneja" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://twitter.com/SanjayAnejaMD" target="_blank"><i class="fab fa-twitter"></i>
+                                                &nbsp; Twitter</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Detroit, MI</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Sanjay_Aneja.jpeg" alt="Sanjay Aneja">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Sanjay Aneja, MD</p>
+                                    <p class="people-text">Principal Investigator</p>
                                     <br>
-                                    <div>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:sanjay.aneja@yale.edu">Email</a>
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:sachin.umrao@yale.edu">Email</a>
+                                            href="https://github.com/sanjayaneja" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/Sumrao" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
+                                                href="https://twitter.com/SanjayAnejaMD" target="_blank"><i class="fab fa-twitter"></i>
+                                                &nbsp; Twitter</a>
                                     </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Detroit, MI</p>
                                 </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Kanpur, India</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Generalization of Deep Learning Models</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Sachin_Umrao.jpeg" alt="Sachin Umrao">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text hide-on-small-only">Sachin Umrao</p>
-                            <p class="flow-text bold-text hide-on-med-and-up" style="font-weight: bold;">Sachin Umrao
-                            </p>
-                            <p class="people-text">Postdoctoral Fellow</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:sachin.umrao@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/Sumrao" target="_blank"><i class="fab fa-github"></i>
-                                    &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Kanpur, India</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Generalization of Deep Learning Models</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Enoch_chang.JPG" width=175px height=175px alt="Enoch Chang">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Ryan_Maresca.jpg" width="100%" height="100%" alt="Ryan Maresca">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Enoch Chang</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Ryan Maresca</p>
+                                        <p class="people-text">Data Scientist</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:ram82097@gmail.com">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/Ryan-Maresca" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: North Haven, CT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Ryan_Maresca.jpg" alt="Ryan Maresca">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Ryan Maresca</p>
+                                    <p class="people-text">Data Scientist</p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:ram82097@gmail.com">Email</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                            href="https://github.com/Ryan-Maresca" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: North Haven, CT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Tommy_Hager.jpg" width="100%" height="100%" alt="Tommy Hager">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Tommy Hager</p>
+                                        <p class="people-text">Data Scientist</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:tommy.hager@yale.edu">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/ThomasNHager" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Fort Collins, CO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Tommy_Hager.jpg" alt="Tommy Hager">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Tommy Hager</p>
+                                    <p class="people-text">Data Scientist</p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:tommy.hager@yale.edu">Email</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                            href="https://github.com/ThomasNHager" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Fort Collins, CO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Saeed_Hossain.jpg" width="100%" height="100%" alt="Saeed Hossain">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Saeed Hossain</p>
+                                        <p class="people-text">Research Assistant</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:saeedhossain01@gmail.com">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/saeedhossain01" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: East Patchogue, NY</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Saeed_Hossain.jpg" alt="Saeed Hossain">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Saeed Hossain</p>
+                                    <p class="people-text">Research Assistant</p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:saeedhossain01@gmail.com">Email</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                            href="https://github.com/saeedhossain01" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: East Patchogue, NY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Durga_Sritharan.jpg" width="100%" height="100%" alt="Durga Sritharan">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Durga Sritharan</p>
+                                        <p class="people-text">Post-Graduate Associate</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:durga.sritharan@yale.edu">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/durgasritharan" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Ames, IA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Durga_Sritharan.jpg" alt="Durga Sritharan">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Durga Sritharan</p>
+                                    <p class="people-text">Post-Graduate Associate</p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:durga.sritharan@yale.edu">Email</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                            href="https://github.com/durgasritharan" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Ames, IA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/James_Shen.jpg" width="100%" height="100%" alt="James Shen">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">James Shen</p>
+                                        <p class="people-text"></p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Belle Mead NJ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/James_Shen.jpg" alt="James Shen">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">James Shen</p>
+                                    <p class="people-text"></p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:">Email</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                            href="https://github.com/" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Belle Mead NJ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Sajid_Hossain.jpg" width="100%" height="100%" alt="Sajid Hossain">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Sajid Hossain</p>
+                                        <p class="people-text">Medical Student</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:sajid.hossain@yale.edu">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/sajid-hossain-md23" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Bellport, NY</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Sajid_Hossain.jpg" alt="Sajid Hossain">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Sajid Hossain</p>
                                     <p class="people-text">Medical Student</p>
                                     <br>
-                                    <div>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:sajid.hossain@yale.edu">Email</a>
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:enoch.chang@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/enoch-chang-1" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
+                                            href="https://github.com/sajid-hossain-md23" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
                                     </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Bellport, NY</p>
                                 </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Bakerfield, CA</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Imaging Biomarkers of Brain Metastases, Deep Learning for Survival Analysis,
-                                            Deep Learning for SBRT Side Effect Prediction</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Enoch_chang.JPG" alt="Enoch Chang">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Enoch Chang</p>
-                            <p class="people-text">Medical Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:enoch.chang@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/enoch-chang-1" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Bakerfield, CA</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Imaging Biomarkers of Brain Metastases, Deep Learning for Survival Analysis,
-                                    Deep Learning for SBRT Side Effect Prediction</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Rachel_Choi.jpeg" width=175px height=175px alt="Rachel Choi">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Saahil_Chadha.jpg" width="100%" height="100%" alt="Saahil Chadha">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Rachel Choi</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Saahil Chadha</p>
+                                        <p class="people-text">Medical Student</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:saahil.chadha@yale.edu">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/saahilchadha1" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://twitter.com/Saahil__Chadha" target="_blank"><i class="fab fa-twitter"></i>
+                                                &nbsp; Twitter</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Minnetonka, MN</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Saahil_Chadha.jpg" alt="Saahil Chadha">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Saahil Chadha</p>
                                     <p class="people-text">Medical Student</p>
                                     <br>
-                                    <div>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:saahil.chadha@yale.edu">Email</a>
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:rachel.choi@yale.edu">Email</a>
+                                            href="https://github.com/saahilchadha1" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/fructokinase2" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
+                                            href="https://twitter.com/Saahil__Chadha" target="_blank"><i class="fab fa-twitter"></i>
+                                            &nbsp; Twitter</a>
                                     </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Minnetonka, MN</p>
                                 </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>San Francisco, CA</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Imaging Biomarkers for Breast Cancer Outcomes</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Rachel_Choi.jpeg" alt="Rachel Choi">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Rachel Choi</p>
-                            <p class="people-text">Medical Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:rachel.choi@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/fructokinase2" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>San Francisco, CA</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Imaging Biomarkers for Breast Cancer Outcomes</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Aidan_Gilson.jpg" width=175px height=175px alt="Aidan Gilson">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Dan_Fu.jpg" width="100%" height="100%" alt="Dan Fu">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Aidan Gilson</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Dan Fu</p>
+                                        <p class="people-text">Medical Student</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:danfu42@gmail.com">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/dfu5823" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Millburn, NJ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Dan_Fu.jpg" alt="Dan Fu">
+                            </div>
+                        </div>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Dan Fu</p>
                                     <p class="people-text">Medical Student</p>
                                     <br>
-                                    <div>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:danfu42@gmail.com">Email</a>
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:aidan.gilson@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/aidan-gilson" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
+                                            href="https://github.com/dfu5823" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
                                     </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Millburn, NJ</p>
                                 </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Northampton, MA</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Generaliztion of Deep Learning Models</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Aidan_Gilson.jpg" alt="Aidan Gilson">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Aidan Gilson</p>
-                            <p class="people-text">Medical Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:aidan.gilson@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/aidan-gilson" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Northampton, MA</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Generalization of Deep Learning Models</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Guneet_Janda.jpg" width=175px height=175px alt="Guneet Janda">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Anand_Srinivasan.jpg" width="100%" height="100%" alt="Anand Srinivasan">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Guneet Janda</p>
-                                    <p class="people-text">Medical Student</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:guneet.janda@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/guneetjanda" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Solon, OH</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Quantitative PET Imaging Biomarkers in NSCLC </p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Anand Srinivasan</p>
+                                        <p class="people-text">Undergraduate Student</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:anand.srinivasan@yale.edu">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/SrinivasanAnand" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Atlanta, GA</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Guneet_Janda.jpg" alt="Guneet Janda">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Guneet Janda</p>
-                            <p class="people-text">Medical Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:guneet.janda@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/guneetjanda" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Solon, OH</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Quantitative PET Imaging Biomarkers in NSCLC </p>
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Anand_Srinivasan.jpg" alt="Anand Srinivasan">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Victor_Lee.png" width=175px height=175px alt="Victor Lee">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Victor Lee</p>
-                                    <p class="people-text">Medical Student</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:victor.lee@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/VictorLee94" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Toronto, Canada</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Generalization of Deep Learning Models</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Victor_Lee.png" alt="Victor Lee">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Victor Lee</p>
-                            <p class="people-text">Medical Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:victor.lee@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/VictorLee94" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Toronto, Canada</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Generalization of Deep Learning Models</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Null_Image.png" width=175px height=175px alt="Ragini Luthra">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Ragini Luthra</p>
-                                    <p class="people-text">Medical Student</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:ragini.luthra@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/rluthra" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>New Dehli, India</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Deep Learning for Survival Analysis</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Null_Image.png" alt="Ragini Luthra">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Ragini Luthra</p>
-                            <p class="people-text">Medical Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:ragini.luthra@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/rluthra" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>New Dehli, India</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Deep Learning for Survival Analysis</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Juliana_Veira.jpeg" width=175px height=175px alt="Juliana Veira">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Juliana Veira</p>
-                                    <p class="people-text">Medical Student</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:juliana.veira@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/julianaveira" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Norwalk, CT</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>ML Driven BMI Measurement For Cancer Outcome Prediction</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Juliana_Veira.jpeg" alt="Juliana Veira">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Juliana Veira</p>
-                            <p class="people-text">Medical Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:juliana.veira@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/julianaveira" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Norwalk, CT</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>ML Driven BMI Measurement For Cancer Outcome Prediction</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Justin_Du.jpg" width=175px height=175px alt="Justin Du">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Justin Du</p>
-                                    <p class="people-text">Undergraduate</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:justin.du@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/mdew192837" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Memphis, TN</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Interpretability of Deep Learning Models, Deep learning derived digital twins
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Justin_Du.jpg" alt="Justin Du">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Justin Du</p>
-                            <p class="people-text">Undergraduate</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:justin.du@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/mdew192837" target="_blank"><i class="fab fa-github"></i>
-                                    &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Memphis, TN</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Interpretability of Deep Learning Models, Deep learning derived digital twins</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Ryan_Joseph.jpeg" width=175px height=175px alt="Ryan Joseph">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Ryan Joseph</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Anand Srinivasan</p>
                                     <p class="people-text">Undergraduate Student</p>
                                     <br>
-                                    <div>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:anand.srinivasan@yale.edu">Email</a>
                                         <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:ryanjoseph@mail.usf.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/DeepMindv2" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
+                                            href="https://github.com/SrinivasanAnand" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
                                     </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Atlanta, GA</p>
                                 </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Tampa, FL</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Bayesian Deep Learning on Medical Images</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Ryan_Joseph.jpeg" alt="Ryan Joseph">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Ryan Joseph</p>
-                            <p class="people-text">Undergraduate Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:ryanjoseph@mail.usf.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/DeepMindv2" target="_blank"><i class="fab fa-github"></i>
-                                    &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Tampa, FL</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Bayesian Deep Learning on Medical Images</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Krish_Moran.jpg" width=175px height=175px alt="Krish Moran">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Neev_Makin.jpg" width="100%" height="100%" alt="Neev Makin">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Krish Moran</p>
-                                    <p class="people-text">Undergraduate Student</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/krishmoran" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Guilford, CT</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Deep Learning models for Lung Nodule Classification</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Neev Makin</p>
+                                        <p class="people-text">Student</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:neevmakin@gmail.com">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/NMakin-TCAM" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Brampton, ON, Canada</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Krish_Moran.jpg" alt="Krish Moran">
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Neev_Makin.jpg" alt="Neev Makin">
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Krish Moran</p>
-                            <p class="people-text">Undergraduate Student</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/krishmoran" target="_blank"><i class="fab fa-github"></i>
-                                    &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Guilford, CT</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Deep Learning models for Lung Nodule Classification</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Neev Makin</p>
+                                    <p class="people-text">Student</p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:neevmakin@gmail.com">Email</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                            href="https://github.com/NMakin-TCAM" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Brampton, ON, Canada</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Gabriel_saruhashi.JPG" width=175px height=175px
-                                alt="Gabriel Saruhashi">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Khayyam_Hossain.jpg" width="100%" height="100%" alt="Khayyam Hossain">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Gabriel Saruhashi</p>
-                                    <p class="people-text">Undergraduate</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:gabriel.saruhashi@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/gabrielsaruhashi" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Sau Paulo, Brazil</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>NLP for Clinical Trial Matching, Deep Learning Interpretation of Cardiac
-                                            Echos, ML Methods for Health Resource Allocation</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Khayyam Hossain</p>
+                                        <p class="people-text">Student</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:khayyamhossain06@gmail.com">Email</a>
+                                            <a class="waves-effect waves-light btn-small yale-blue-background"
+                                                href="https://github.com/khayyamhasan" target="_blank"><i class="fab fa-github"></i>
+                                                &nbsp; Github</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Bellport, NY</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Gabriel_saruhashi.JPG"
-                                alt="Gabriel Saruhashi">
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Khayyam_Hossain.jpg" alt="Khayyam Hossain">
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Gabriel Saruhashi</p>
-                            <p class="people-text">Undergraduate</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:gabriel.saruhashi@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/gabrielsaruhashi" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Sau Paulo, Brazil</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>NLP for Clinical Trial Matching, Deep Learning Interpretation of Cardiac
-                                    Echos, ML Methods for Health Resource Allocation</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Khayyam Hossain</p>
+                                    <p class="people-text">Student</p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:khayyamhossain06@gmail.com">Email</a>
+                                        <a class="waves-effect waves-light btn-small yale-blue-background"
+                                            href="https://github.com/khayyamhasan" target="_blank"><i class="fab fa-github"></i>
+                                            &nbsp; Github</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Bellport, NY</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Sarah_Gao.jpeg" width=175px height=175px alt="Sarah Gao">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s4 hide-on-small-only" style="padding-left: 15%;">
+                            <div class="card-image center-align" style="width: 225px; height: 225px; overflow: hidden; border-radius: 5px; margin-top: 3%;">
+                                <img src="../img/Headshots/Rahul_DSouza.jpg" width="100%" height="100%" alt="Rahul D'Souza">
+                            </div>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Sarah Gao</p>
-                                    <p class="people-text">Resident Physician</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:sarah.gao@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/Aneja-Lab-Yale" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Arcadia, CA</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Deep Learning Models for Glioma Classification</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card horizontal hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px;">
+                                <div class="card-stacked">
+                                    <div class="card-content center-align">
+                                        <p class="flow-text hide-on-small-only yale-blue-text" style="font-weight: bold;">Rahul D'Souza</p>
+                                        <p class="people-text">Student</p>
+                                        <br>
+                                        <div class="center-align">
+                                            <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:rahulndsouza@gmail.com">Email</a>
+                                        </div>
+                                        <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Hockessin, DE</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Sarah_Gao.jpeg" alt="Sarah Gao">
+                    
+                    <div class="row hide-on-med-and-up">
+                        <div class="col s4" style="padding-left: 15%;">
+                            <div class="card-image center" style="border-radius: 5px;">
+                                <img class="responsive-img" src="../img/Headshots/Rahul_DSouza.jpg" alt="Rahul D'Souza">
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Sarah Gao</p>
-                            <p class="people-text">Resident Physician</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:sarah.gao@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/Aneja-Lab-Yale" target="_blank"><i
-                                        class="fab fa-github"></i> &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Arcadia, CA</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Deep Learning Models for Glioma Classification</p>
+                        <div class="col s8" style="padding-left: 10%;">
+                            <div class="card hoverable" style="border-radius: 5px; width: 80%; margin-right: 20%; height: 225px; margin-top: 3%;">
+                                <div class="card-content center-align">
+                                    <p class="flow-text bold-text yale-blue-text" style="font-weight: bold;">Rahul D'Souza</p>
+                                    <p class="people-text">Student</p>
+                                    <br>
+                                    <div class="center-align">
+                                        <a class="waves-effect waves-light btn-small yale-blue-background" href="mailto:rahulndsouza@gmail.com">Email</a>
+                                    </div>
+                                    <p class="people-text center-align" style="margin-top: 20px; font-weight: bold;">Hometown: Hockessin, DE</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Benjamin_Greenberger.png" width=175px height=175px
-                                alt="Benjamin Greenberger">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Benjamin Greenberger</p>
-                                    <p class="people-text">Resident Physician</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:benjamin.greenberger@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/bagreenb" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Pittsburgh, PA</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Imaging Biomarkers for Early Stage NSCLC</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Benjamin_Greenberger.png"
-                                alt="Benjamin Greenberger">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Benjamin Greenberger</p>
-                            <p class="people-text">Resident Physician</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:benjamin.greenberger@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/bagreenb" target="_blank"><i class="fab fa-github"></i>
-                                    &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Pittsburgh, PA</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Imaging Biomarkers for Early Stage NSCLC</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Daniel_Yang.jpeg" width=175px height=175px alt="Daniel Yang">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Daniel Yang</p>
-                                    <p class="people-text">Resident Physician</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:daniel.yang@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/danielxyang" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Cupertino, CA</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>Machine Learning Methods for Missing Data Correction</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Daniel_Yang.jpeg" alt="Daniel Yang">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Daniel Yang</p>
-                            <p class="people-text">Resident Physician</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:daniel.yang@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/danielxyang" target="_blank"><i class="fab fa-github"></i>
-                                    &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Cupertino, CA</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>Machine Learning Methods for Missing Data Correction</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 hide-on-small-only">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image center person-image-card">
-                            <img src="../img/Headshots/Daniel_Pinkham.jpg" width=175px height=175px alt="Daniel Pinkham">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <div class="col l5">
-                                    <p class="flow-text hide-on-small-only">Daniel Pinkham, PhD, DABR</p>
-                                    <p class="people-text">Assistant Professor, Medical Physicist</p>
-                                    <br>
-                                    <div>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="mailto:daniel.pinkham@yale.edu">Email</a>
-                                        <a class="waves-effect waves-light btn-small yale-blue-background"
-                                            href="https://github.com/danpinkham" target="_blank"><i
-                                                class="fab fa-github"></i> &nbsp; Github</a>
-                                    </div>
-                                </div>
-                                <div class="col l3">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                        <p>Fairfax, VA</p>
-                                    </div>
-                                </div>
-                                <div class="col l4">
-                                    <div class="people-text">
-                                        <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                        <p>ML Methods for Modeling Dosimetric Data</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 hide-on-med-and-up">
-                    <div class="card hoverable">
-                        <div class="card-image center">
-                            <img class="responsive-img" src="../img/Headshots/Daniel_Pinkham.jpg" alt="Daniel Pinkham">
-                        </div>
-                        <div class="card-content">
-                            <p class="flow-text bold-text" style="font-weight: bold;">Daniel Pinkham, PhD, DABR</p>
-                            <p class="people-text">Assistant Professor, Medical Physicist</p>
-                            <br>
-                            <div>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="mailto:daniel.pinkham@yale.edu">Email</a>
-                                <a class="waves-effect waves-light btn-small yale-blue-background"
-                                    href="https://github.com/danpinkham" target="_blank"><i class="fab fa-github"></i>
-                                    &nbsp; Github</a>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Hometown</p>
-                                <p>Fairfax, VA</p>
-                            </div>
-                            <div class="people-text">
-                                <p class="bold-text" style="font-weight: bold;">Projects</p>
-                                <p>ML Methods for Modeling Dosimetric Data</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                                                                                                                                
+    </section>
+    <section id="alumniList" class="section section-alumniList scrollspy">
+        <div class="container" style="background-color:white">
+            <ul class='collection with-header' style="border: none;">
+                <li class='collection-header center-align'>
+                    <h4>Alumni</h4>
+                </li>
+                <li class='collection-item'>Aishwarya Nene | 2022-2023 | Resident Physician, Internal Medicine, UCSF</li>
+                <li class='collection-item'>Arman Avesta | 2020-2023 | Instructor, Department of Radiology, Massachusetts General Hospital</li>
+                <li class='collection-item'>James Laird | 2022-2023 | Assistant Professor, Department of Radiation Oncology, Yale School of Medicine</li>
+                <li class='collection-item'>Rachel Choi | 2020-2022 | Resident Physician, Dermatology, Stanford University</li>
+                <li class='collection-item'>Victor Lee | 2020-2022 | Resident Physician, Radiation Oncology, Yale School of Medicine</li>
+                <li class='collection-item'>Benjamin Greenberger | 2020-2021 | Assistant Professor, Department of Radiation Oncology, University of Pittsburgh</li>
+                <li class='collection-item'>Marina Joel | 2020-2021 | Medical Student, Johns Hopkins University</li>
+                <li class='collection-item'>Daniel Pinkham | 2020-2021 | Assistant Professor, Department of Radiation Oncology, University of Virginia</li>
+                <li class='collection-item'>Yongfeng (Miles) Hui | 2020-2022 | Data Scientist, Amazon Inc, Seattle WA</li>
+                <li class='collection-item'>Sachin Umrao | 2020-2021 | Postdoctoral Scholar, UCSF</li>
+                <li class='collection-item'>Jason Chung | 2020 | Undergraduate Student, Cornell University</li>
+                <li class='collection-item'>Aidan Gilson | 2020 | Medical Student, Yale School of Medicine</li>
+                <li class='collection-item'>Guneet Janda | 2020 | Medical Student, Yale School of Medicine</li>
+                <li class='collection-item'>Juliana Veira | 2020 | Resident Physician, Anesthesia, Yale New Haven Hospital</li>
+                <li class='collection-item'>Enoch Chang | 2019-2021 | Resident Physician, Radiation Oncology, MD Anderson Cancer Center</li>
+                <li class='collection-item'>Daniel Yang | 2019-2020 | Assistant Professor, Department of Radiation Oncology, UT Southwestern Medical Center</li>
+                <li class='collection-item'>Sarah Gao | 2019-2020 | Radiation Oncologist, Radiation Oncology Associates, Fairfax VA</li>
+                <li class='collection-item'>Justin Du | 2019-2021 | Software Engineer, Taro</li>
+                <li class='collection-item'>Gabriel Saruhashi | 2019-2020 | Founder, Emerge Career</li>
+                <li class='collection-item'>Krish Moran | 2018 | Co-Founder, Viridian Exchange</li>
+                <li class='collection-item'>Benjamin Kann | 2018-2019 | Assistant Professor, Department of Radiation Oncology, Dana Farber Cancer Center</li>
+            </ul>
         </div>
     </section>
+    
 
     <!-- Footer -->
     <footer class="page-footer yale-blue-background">

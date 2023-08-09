@@ -14,45 +14,68 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <!-- For Custom Font (Yale Type Face) -->
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+    <style>
+        /* Custom CSS for the header */
+        .header-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .header-image {
+            max-height: 300px; /* Adjust this value as needed */
+            width: auto;
+            
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 25px; /* Adjust this value for the desired space from the bottom */
+            left: 55%; /* Adjust this value for the desired space from the right */
+            background-color: #003366; /* Yale Blue background color */
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px; /* Adjust this value for the desired height */
+        }
+
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation li {
+            margin: 0;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+    </style>
     <title>Aneja Lab</title>
 </head>
 
 <body id="home" class="scrollspy">
     <!-- Navbar -->
-    <div class="yale-blue-background">
-        <img class="responsive-img" src="../img/New_Website_Banner.png" alt="">
-        <nav class="yale-blue-background nav-center">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                        <i class="material-icons">menu</i>
-                    </a>
-                    <ul class="hide-on-med-and-down">
-                        <li>
-                            <a href="../index.html#welcome">Home</a>
-                        </li>
-                        <li>
-                            <a href="../people">People</a>
-                        </li>
-                        <li>
-                            <a href="../projects/">Projects</a>
-                        </li>
-                        <li>
-                            <a href="../publications">Publications</a>
-                        </li>
-                        <li>
-                            <a href="../journal-club/">Journal Club</a>
-                        </li>
-                        <li>
-                            <a href="../join">Join Us</a>
-                        </li>
-                        <li class="active">
-                            <a href="./">Support</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <div class="yale-blue-background header-container">
+        <img class="responsive-img header-image" src="../img/New_Website_Banner.png" alt="">
+        <div class="navigation">
+            <ul>
+                <li><a href="../index.html#welcome">Home</a></li>
+                <li><a href="../people">People</a></li>
+                <li><a href="../projects">Projects</a></li>
+                <li><a href="../publications">Publications</a></li>
+                <li><a href="../journal-club">News</a></li>
+                <li><a href="../join">Contact</a></li>
+                <li class="active"><a href="./">Support</a></li>
+            </ul>
+        </div>
     </div>
     <ul class="sidenav" id="mobile-nav">
         <li>
@@ -68,10 +91,10 @@
             <a href="../publications">Publications</a>
         </li>
         <li>
-            <a href="../journal-club/">Journal Club</a>
+            <a href="../journal-club/">News</a>
         </li>
         <li>
-            <a href="../join">Join Us</a>
+            <a href="../join">Contact</a>
         </li>
         <li class="active">
             <a href="./">Support</a>
