@@ -28,35 +28,35 @@
     }
 
     .navigation {
-        position: absolute;
-        bottom: 25px; /* Adjust this value for the desired space from the bottom */
-        left: 55%; /* Adjust this value for the desired space from the right */
-        background-color: #003366; /* Yale Blue background color */
-        padding: 15px;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 70px; /* Adjust this value for the desired height */
-    }
+            position: absolute;
+            top: 25px; /* Adjust this value for the desired space from the bottom */
+            left: 55%; /* Adjust this value for the desired space from the right */
+            background-color: #003366; /* Yale Blue background color */
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px; /* Adjust this value for the desired height */
+        }
 
-    .navigation ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 10px;
-    }
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
 
-    .navigation li {
-        margin: 0;
-    }
+        .navigation li {
+            margin: 0;
+        }
 
-    .navigation a {
-        color: white;
-        text-decoration: none;
-        padding: 5px 10px;
-    }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
   </style>
   <title>Aneja Lab</title>
 </head>
@@ -73,9 +73,7 @@
   <!-- Navbar -->
   <div class="navbar yale-blue-background">
     <img class="responsive-img" src="img/New_Website_Banner.png" alt="">
-    <nav class="yale-blue-background nav-center">
-        <div class="container">
-            <div class="nav-wrapper">
+            <div class="navigation">
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
                 </a>
@@ -103,8 +101,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
   </div>
   <ul class="sidenav" id="mobile-nav">
       <li class="active">
