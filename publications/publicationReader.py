@@ -54,10 +54,10 @@ for link in publicationLinks:
     if link.parent.has_attr("class") and link.parent["class"][0] == "ncbi-docsum":
         pubLinksList.append("https://pubmed.ncbi.nlm.nih.gov" + str(link["href"]).strip("/").strip("pubmed") + "/")
 
-dataF = open("publicationsListData.txt", "w")
+dataF = open("publications/publicationsListData.txt", "w")
 
 for i in range(len(pubTitlesList)):
-    dataF.write(f"{pubTitlesList[i]} | {str(pubAuthorsList[i])} | {pubDatesList[i]} | {pubLinksList[i]}\n")
+    dataF.write(f"{pubTitlesList[i]} | " + str(pubAuthorsList[i]).strip("]").strip("[").strip("'") + f"| {pubDatesList[i]} | {pubLinksList[i]}\n")
 
 # index.pull()
 # repo.commit("-m", "auto publications update", author="NMakin-TCAM <neevmakin@gmail.com>")
