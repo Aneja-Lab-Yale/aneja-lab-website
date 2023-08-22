@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!-- For Custom Font (Yale Type Face) -->
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+    <style>
+        /* Custom CSS for the header */
+        .header-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .header-image {
+            max-height: 300px; /* Adjust this value as needed */
+            width: auto;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 25px; /* Adjust this value for the desired space from the bottom */
+            left: 55%; /* Adjust this value for the desired space from the right */
+            background-color: #003366; /* Yale Blue background color */
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px; /* Adjust this value for the desired height */
+        }
+
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation li {
+            margin: 0;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            max-height: 600px; /* Adjust the maximum height as needed */
+            overflow: hidden;
+            margin: 0 auto; /* Center horizontally */
+            text-align: center; /* Center the caption text */
+            position: relative;
+        }
+
+        .mySlides img {
+            width: auto;
+            max-height: 100%; /* Ensure the image maintains its aspect ratio */
+        }
+
+        /* Position the navigation arrows */
+        /* Add background color to prev/next arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark background color */
+        }
+
+        .prev {
+            left: 10px; /* Adjust the position from the left edge */
+        }
+
+        .next {
+            right: 10px; /* Adjust the position from the right edge */
+            border-radius: 3px 0 0 3px;
+        }
+
+
+        .numbertext {
+            color: #313131;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+    <title>Aneja Lab</title>
+</head>
+
+<body id="home" class="scrollspy">
+    <!-- Navbar -->
+    <div class="yale-blue-background header-container">
+        <img class="responsive-img header-image" src="../img/New_Website_Banner.png" alt="">
+        <div class="navigation">
+            <ul>
+                <li><a href="../index.html#welcome">Home</a></li>
+                <li><a href="../projects">People</a></li>
+                <li><a href="../projects">Projects</a></li>
+                <li><a href="../publications">Publications</a></li>
+                <li><a href="../journal-club">News</a></li>
+                <li class="active"><a href="./">Gallery</a></li>
+                <li><a href="../join">Contact</a></li>
+                <li><a href="../support">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="../index.html#welcome">Home</a>
+        </li>
+        <li>
+            <a href="../projects">People</a>
+        </li>
+        <li>
+            <a href="../projects">Projects</a>
+        </li>
+        <li>
+            <a href="../publications">Publications</a>
+        </li>
+        <li>
+            <a href="../journal-club">News</a>
+        </li>
+        <li class="active">
+            <a href="./">Gallery</a>
+        </li>
+        <li>
+            <a href="../join">Contact</a>
+        </li>
+        <li>
+            <a href="../support">Support</a>
+        </li>
+    </ul>
+
+    <!-- Image Gallery -->
+    <div class="slideshow-container">
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="Cancun.jpg" alt="Cancun">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="Cruise.JPG" alt="Cruise">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="EiffelTower.jpg" alt="EiffelTower">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="GreatWall.jpg" alt="GreatWall">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="RivieraMaya.JPG" alt="RivieraMaya">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="StLucia.jpg" alt="StLucia">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer yale-blue-background">
+        <div class="container center">
+            <ul style="font-size: 16px">
+                <li>The Aneja Lab | Yale University</li>
+                <li>330 Cedar St, New Haven, CT 06519</li>
+                <li>203.200.2000 | <a href="mailto:aneja.lab@yale.edu">aneja.lab@yale.edu</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center white-text">
+                © 2020 Aneja Lab
+            </div>
+        </div>
+    </footer>
+
+    <!--JavaScript at the end of the body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+    
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+    
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+    
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+    
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        }
+    </script>
+  
+
+    <script>
+        // Sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {});
+    </script>
+</body>
+
+</html>

@@ -104,6 +104,7 @@
                 <li><a href="../projects">Projects</a></li>
                 <li class="active"><a href="./">Publications</a></li>
                 <li><a href="../journal-club">News</a></li>
+                <li><a href="../gallery/index.html">Gallery</a></li>
                 <li><a href="../join">Contact</a></li>
                 <li><a href="../support">Support</a></li>
             </ul>
@@ -120,10 +121,13 @@
             <a href="../projects">Projects</a>
         </li>
         <li class="active">
-            <a href="./">Publications</a>
+            <a href="../publications/index.html">Publications</a>
         </li>
         <li>
             <a href="../journal-club">News</a>
+        </li>
+        <li>
+            <a href="../gallery/index.html">Gallery</a>
         </li>
         <li>
             <a href="../join">Contact</a>
@@ -238,6 +242,12 @@
 
         // Call the fetchPublications function to load publications
         fetchPublications();
+    </script>
+    <script>
+        function toggleNav() {
+            const navigation = document.querySelector('.navigation');
+            navigation.classList.toggle('active');
+        }
     </script>
 </body>
 
