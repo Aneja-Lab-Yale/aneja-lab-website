@@ -57,12 +57,10 @@ for link in publicationLinks:
 dataF = open("publications/publicationsListData.txt", "w")
 
 for i in range(len(pubTitlesList)):
-    if i == len(publicationsTitles)-1:
+    if i == len(pubTitlesList)-1:
         dataF.write(f"{pubTitlesList[i]} | " + str(pubAuthorsList[i]).strip("]").strip("[").strip("'") + f"| {pubDatesList[i]} | {pubLinksList[i]}")
-        print(len(publicationsTitles))
     else:
         dataF.write(f"{pubTitlesList[i]} | " + str(pubAuthorsList[i]).strip("]").strip("[").strip("'") + f"| {pubDatesList[i]} | {pubLinksList[i]}\n")
-        print(len(publicationsTitles))
 # index.pull()
 # repo.commit("-m", "auto publications update", author="NMakin-TCAM <neevmakin@gmail.com>")
 # index.push()
