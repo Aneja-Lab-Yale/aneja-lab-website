@@ -1,4 +1,4 @@
-name: run publicationReder.py
+name: run publicationReader.py
 
 on:
   schedule:
@@ -26,17 +26,18 @@ jobs:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python publicationReader.py
       
+      - name: pull latest changes
+        run: git pull origin master
+      
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Github Action"
           git add -A
-          git diff-index -- quiet HEAD || (git commit -a -m "updated publications" --allow-empty)
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+          git diff-index --quiet HEAD || (git commit -a -m "updated publications" --allow-empty)
 
       - name: push changes
         uses: ad-m/github-push-action@master
-        with: github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: master 
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
