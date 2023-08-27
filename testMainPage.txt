@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- For Custom Font (Yale Type Face) -->
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+  <style>
+    /* Custom CSS for the header */
+    header-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .header-image {
+            max-height: 300px; /* Adjust this value as needed */
+            width: auto;
+            
+        }
+
+        .navigation {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          background-color: #0033668f;
+          /* opacity: 1%; */
+          /* padding: 10px; */
+          /* border-radius: 15px; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 70px;
+          width: 60%;
+      }
+
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation li {
+            margin: 0;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+  </style>
+  <title>Aneja Lab</title>
+</head>
+
+<body id="home" class="scrollspy">
+  <!-- Section: Logo -->
+  <!-- <section class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/New_Website_Banner.png">
+      </li>
+    </ul>
+  </section> -->
+  <!-- Navbar -->
+  <div class="navbar yale-blue-background">
+    <img class="responsive-img" src="img/New_Website_Banner.png" alt="">
+            <div class="navigation">
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="hide-on-med-and-down">
+                    <li class="active">
+                        <a href="#welcome">Home</a>
+                    </li>
+                    <li>
+                        <a href="people">People</a>
+                    </li>
+                    <li>
+                        <a href="projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="publications">Publications</a>
+                    </li>
+                    <li>
+                        <a href="journal-club">News</a>
+                    </li>
+                    <li>
+                      <a href="../gallery/index.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="join">Join Us</a>
+                    </li>
+                    <li>
+                        <a href="support">Support</a>
+                    </li>
+                </ul>
+            </div>
+  </div>
+  <ul class="sidenav" id="mobile-nav">
+      <li class="active">
+          <a href="#welcome">Home</a>
+      </li>
+      <li>
+          <a href="people">People</a>
+      </li>
+      <li>
+          <a href="publications">Publications</a>
+      </li>
+      <li>
+          <a href="projects">Projects</a>
+      </li>
+      <li>
+          <a href="journal-club">News</a>
+      </li>
+      <li>
+        <a href="../gallery/index.html">Gallery</a>
+      </li>
+      <li>
+          <a href="join">Join Us</a>
+      </li>
+      <li>
+          <a href="support">Support</a>
+      </li>
+  </ul>
+
+  <!-- Section: Philosophy -->
+  <section id="welcome" class="section section-philosophy grey lighten-4 scrollspy">
+    <div style="margin-left: 5rem; margin-right: 5rem">
+      <div class="row">
+        <div class="col s12 l4 hide-on-small-only">
+          <div class="card hoverable center">
+            <br>
+            <img class="hide-on-med-and-down" src="../img/Headshots/Sanjay_Aneja.jpg"
+              style="max-width: 75%; height: auto;" alt="Sanjay Aneja">
+            <img class="responsive-img hide-on-large-only" src="../img/Headshots/Sanjay_Aneja.jpg"
+              alt="Sanjay Aneja">
+            <div class="card-content">
+              <p style="font-size: 20px">Sanjay Aneja, MD</p>
+              <p>Principal Investigator</p>
+              <p>Assistant Professor of Therapeutic Radiology</p>
+              <a href="mailto:sanjay.aneja@yale.edu">sanjay.aneja@yale.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="col l5">
+          <h4 class="center">Welcome to the Aneja Lab</h4>
+          <p>
+            Our research is focused on the application of machine learning techniques to clinical medicine. We leverage
+            high dimensional healthcare data to improve patient outcomes. Specifically, we employ
+            machine learning discoveries from our lab to create artificial intelligence driven solutions.
+          </p>
+          <p>
+            We are fortunate to have an interdisciplinary team of clinicians, computer scientists, mathematicians, and data
+            scientists. Given our diverse backgrounds, our lab’s interests span multiple domains from "calculation to
+            clinic". Below are on-going research areas:
+          </p>
+          <h5>"Calculation"</h5>
+          <ol>
+            <li>Machine Learning Algorithm Development</li>
+            <li>Metric Learning</li>
+            <li>Generalization Theory</li>
+            <li>Interpretability Techniques</li>
+            <li>Uncertainty Quantification</li>
+          </ol>
+          <h5>"Clinic"</h5>
+          <ol>
+            <li>Clinical Outcome Prediction</li>
+            <li>Disease Classification</li>
+            <li>Clinical Workflow Automation</li>
+          </ol>
+          <p>For more details, please see our <a href="projects">Projects</a> page.</p>
+        </div>
+        <div class="col s12 l4 hide-on-med-and-up">
+          <div class="card hoverable">
+            <div class="card-image center">
+              <img class="responsive-img" src="./img/Headshots/Sanjay_Aneja.jpeg" alt="Sanjay Aneja">
+            </div>
+            <div class="card-content">
+              <p>Sanjay Aneja, MD</p>
+              <p>Assistant Professor of Therapeutic Radiology</p>
+              <a href="mailto:sanjay.aneja@yale.edu">sanjay.aneja@yale.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l3">
+          <a class="twitter-timeline" height=500px href="https://twitter.com/SanjayAnejaMD?ref_src=twsrc%5Etfw">Tweets
+            by SanjayAnejaMD</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- <footer class="section yale-blue-background white-text">
+        <div class="row">
+            <div class="col s3 offset-s2">
+                <p>330 Cedar St, New Haven, CT 06519</p>
+                <p class="valign-wrapper"><i class="small material-icons">person</i> &nbsp; Sanjay
+                    Aneja, MD</p>
+                <p class="valign-wrapper"><i class="small material-icons">phone</i> &nbsp;
+                    203.200.2000</p>
+                <p class="valign-wrapper"><i class="small material-icons">email</i> &nbsp; <a
+                    href="mailto:aneja.lab@yale.edu">aneja.lab@yale.edu</a></p>
+                <p class="flow-text">Aneja Lab &copy; 2020 </p>
+            </div>
+            <div class="col s3">
+                <ul class="collection with-header hoverable" style="color: black">
+                    <li class="collection-item valign-wrapper"><i class="small material-icons">person</i> &nbsp; Sanjay
+                        Aneja, MD</li>
+                    <li class="collection-item valign-wrapper"><i class="small material-icons">phone</i> &nbsp;
+                        203.200.2000</li>
+                    <li class="collection-item valign-wrapper"><i class="small material-icons">email</i> &nbsp; <a
+                            href="mailto:aneja.lab@yale.edu">aneja.lab@yale.edu</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> -->
+
+  <footer class="page-footer yale-blue-background">
+    <div class="container center">
+      <ul style="font-size: 16px">
+        <li>The Aneja Lab | Yale University</li>
+        <li>330 Cedar St, New Haven, CT 06519</li>
+        <li>203.200.2000 | <a href="mailto:aneja.lab@yale.edu">aneja.lab@yale.edu</a></li>
+      </ul>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center white-text">
+        © 2020 Aneja Lab
+      </div>
+    </div>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script>
+    // Sidenav
+    const sideNav = document.querySelector('.sidenav');
+    M.Sidenav.init(sideNav, {});
+
+    // Slider
+    const slider = document.querySelector('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      height: 300,
+      transition: 500,
+      interval: 6000
+    });
+
+    // ScrollSpy
+    const ss = document.querySelectorAll('.scrollspy');
+    M.ScrollSpy.init(ss, {});
+
+    // Collapsible & Modal
+    document.addEventListener('DOMContentLoaded', function () {
+      var collapsibleElems = document.querySelectorAll('.collapsible');
+      var collapsibleInstances = M.Collapsible.init(collapsibleElems, {});
+      var modalElems = document.querySelectorAll('.modal');
+      var modalInstances = M.Modal.init(modalElems, {});
+      var materialBoxElems = document.querySelectorAll('.materialboxed');
+      var materialBoxInstances = M.Materialbox.init(materialBoxElems, {});
+    });
+  </script>
+</body>
+
+</html>
