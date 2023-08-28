@@ -2,7 +2,7 @@ name: run publicationReader.py
 
 on:
   schedule:
-    - cron: "00 00 * * *"
+    - cron: "01 00 * * *"
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
       - name: execute py script
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python publications\publicationReader.py
+        run: python publications/publicationReader.py
       
       - name: pull latest changes
         run: git pull origin master
