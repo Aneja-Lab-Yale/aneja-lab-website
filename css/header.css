@@ -28,6 +28,7 @@
             padding: 0;
             display: flex;
             gap: 0px;
+            font-size: 27px;
         }
 
         .navigation li {
