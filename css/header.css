@@ -11,17 +11,16 @@
 
         .navigation {
             position: absolute;
-            top: 0px; /* Adjust this value for the desired space from the bottom */
-            left: 50%; /* Adjust this value for the desired space from the right */
-            background-color: #00336686; /* Yale Blue background color */
+            top: 0px;
+            left: 42%;
+            background-color: #1b37569f;
             padding: 0px;
-            /* border-radius: 15px; */
+            border-radius: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* height: 70px; Adjust this value for the desired height */
-            width: 50%;
-            height: 30px;
+            width: 60%;
+            height: 100%;
         }
 
         .navigation ul {
