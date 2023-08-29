@@ -12,10 +12,9 @@
         .navigation {
             position: absolute;
             top: 0px;
-            left: 42%;
+            left: 40%;
             background-color: #1b37569f;
             padding: 0px;
-            border-radius: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
