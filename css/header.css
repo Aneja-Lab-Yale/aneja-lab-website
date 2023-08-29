@@ -13,14 +13,15 @@
             position: absolute;
             top: 0px; /* Adjust this value for the desired space from the bottom */
             left: 50%; /* Adjust this value for the desired space from the right */
-            background-color: #00336600; /* Yale Blue background color */
+            background-color: #00336686; /* Yale Blue background color */
             padding: 0px;
             /* border-radius: 15px; */
             display: flex;
             justify-content: center;
             align-items: center;
             /* height: 70px; Adjust this value for the desired height */
-            width: 50%
+            width: 50%;
+            height: 30px;
         }
 
         .navigation ul {
