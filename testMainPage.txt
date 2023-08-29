@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
   <style>
     /* Custom CSS for the header */
-    header-container {
+    .header-container {
             position: relative;
             text-align: center;
         }
@@ -24,30 +24,30 @@
         .header-image {
             max-height: 300px; /* Adjust this value as needed */
             width: auto;
+            display: none;
             
         }
 
         .navigation {
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          background-color: #0033668f;
-          /* opacity: 1%; */
-          /* padding: 10px; */
-          /* border-radius: 15px; */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 70px;
-          width: 60%;
-      }
+            /* position: absolute; */
+            top: 0px; /* Adjust this value for the desired space from the bottom */
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            max-height: 300px;
+            width: 100%;
+            /* margin-left: 50%; */
+            /* background-image: url(img/New_Website_Banner.png); */
+
+        }
 
         .navigation ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 10px;
+            gap: 0px;
+            /* margin-left: 50%; */
         }
 
         .navigation li {
@@ -57,7 +57,17 @@
         .navigation a {
             color: white;
             text-decoration: none;
-            padding: 5px 10px;
+            padding: 5px 5px;
+            /* margin-left: 80%; */
+            float: left;
+            margin-left: 50%;
+        }
+
+        .navigation .menu-wrapper {
+            /* margin-left: -50%; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
   </style>
   <title>Aneja Lab</title>
@@ -74,8 +84,11 @@
   </section> -->
   <!-- Navbar -->
   <div class="navbar yale-blue-background">
-    <img class="responsive-img" src="img/New_Website_Banner.png" alt="">
+    <!-- <img class="responsive-img" src="img/New_Website_Banner.png" alt=""> -->
             <div class="navigation">
+              
+              <div class="menu-wrapper">
+                <img class="responsive-img" src="img/New_Website_Banner.png" alt="">
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
                 </a>
@@ -105,6 +118,7 @@
                         <a href="support">Support</a>
                     </li>
                 </ul>
+              </div>
             </div>
   </div>
   <ul class="sidenav" id="mobile-nav">

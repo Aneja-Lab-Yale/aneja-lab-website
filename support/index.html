@@ -13,8 +13,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <!-- For Custom Font (Yale Type Face) -->
-    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
-    <style>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../css/header.css" type="text/css" charset="utf-8" />
+    <!-- <style>
         /* Custom CSS for the header */
         .header-container {
             position: relative;
@@ -57,7 +58,7 @@
             text-decoration: none;
             padding: 5px 10px;
         }
-    </style>
+    </style> -->
     <title>Aneja Lab</title>
 </head>
 
@@ -66,7 +67,10 @@
     <div class="yale-blue-background header-container">
         <img class="responsive-img header-image" src="../img/New_Website_Banner.png" alt="">
         <div class="navigation">
-            <ul>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="hide-on-med-and-down"> 
                 <li><a href="../index.html#welcome">Home</a></li>
                 <li><a href="../people">People</a></li>
                 <li><a href="../projects">Projects</a></li>
@@ -74,7 +78,7 @@
                 <li><a href="../journal-club">News</a></li>
                 <li><a href="../gallery/index.html">Gallery</a></li>
                 <li><a href="../join">Contact</a></li>
-                <li class="active"><a href="./">Support</a></li>
+                <li class="active"><a href="#">Support</a></li>
             </ul>
         </div>
     </div>

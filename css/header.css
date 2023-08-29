@@ -1,0 +1,42 @@
+.header-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .header-image {
+            max-height: 300px; /* Adjust this value as needed */
+            width: auto;
+            
+        }
+
+        .navigation {
+            position: absolute;
+            top: 0px; /* Adjust this value for the desired space from the bottom */
+            left: 50%; /* Adjust this value for the desired space from the right */
+            background-color: #00336600; /* Yale Blue background color */
+            padding: 0px;
+            /* border-radius: 15px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 70px; Adjust this value for the desired height */
+            width: 50%
+        }
+
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 0px;
+        }
+
+        .navigation li {
+            margin: 0;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 5px;
+        }
