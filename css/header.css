@@ -62,3 +62,8 @@
         font-size: 27px;
     }
 }
+@media (min-width:1468px) {
+    .navigation ul {
+        font-size: 33px;
+    }
+}
