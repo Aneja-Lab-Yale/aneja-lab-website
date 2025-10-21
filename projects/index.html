@@ -65,83 +65,38 @@
 <body id="home" class="scrollspy">
     <!-- Navbar -->
     <div class="yale-blue-background header-container">
-        <img class="responsive-img header-image" src="../img/New_Website_Banner.png" alt="">
         <div class="navigation">
             <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
             </a>
-            <ul class="hide-on-med-and-down"> 
-                <li><a href="../index.html#welcome">Home</a></li>
-                <li><a href="../people">People</a></li>
-                <li class="active"><a href="#">Projects</a></li>
-                <li><a href="../publications">Publications</a></li>
-                <li><a href="../journal-club">News</a></li>
-                <li><a href="../gallery/index.html">Gallery</a></li>
-                <li><a href="../join">Contact</a></li>
-                <li><a href="../support">Support</a></li>
-            </ul>
+            <ul class="hide-on-med-and-down"> </ul>
         </div>
     </div>
-    <ul class="sidenav" id="mobile-nav">
-        <li>
-            <a href="../index.html#welcome">Home</a>
-        </li>
-        <li>
-            <a href="../people">People</a>
-        </li>
-        <li class="active">
-            <a href="./">Projects</a>
-        </li>
-        <li>
-            <a href="../publications">Publications</a>
-        </li>
-        <li>
-            <a href="../journal-club">News</a>
-        </li>
-        <li>
-            <a href="../gallery/index.html">Gallery</a>
-        </li>
-        <li>
-            <a href="../join">Contact</a>
-        </li>
-        <li>
-            <a href="../support">Support</a>
-        </li>
-    </ul>
+    <ul class="sidenav" id="mobile-nav"></ul>
 
     <!-- Section: Team -->
     <section id="team" class="section section-team scrollspy">
         <div class="container">
-            <div>
-                <span style="font-size: 32px">Projects <a class="waves-effect waves-light btn yale-blue-background"
-                        href="https://github.com/Aneja-Lab-Yale" target="_blank"><i class="fab fa-github"></i> &nbsp;
-                        Aneja Lab Github</a></span>
+            <h4>
+                Projects
                 <hr class="col s12 l6 offset-l3">
-            </div>
+            </h4>
             <div>
-                <h5>Deep Learning Deriving Imaging-Based Biomarkers</h5>
+                <h5>Deriving Imaging-Based Biomarkers</h5>
                 <p>
-                    Risk stratification in oncology is clinically challenging and there exists a heterogeneity of
-                    outcomes
-                    among similarly staged patients. There is an increasing need for cost-effective biomarkers which
-                    accurately estimate cancer outcomes. Although molecular biomarkers have promise, they often require
-                    additional testing, specialized equipment, and fail to capture intra-tumoral heterogeneity. We are
-                    interested in studying the utility of deep learning methods to derive quantitative ‘imaging-based
-                    biomarkers’ from pretreatment diagnostic images that provide accurate personalized outcome
-                    estimates.
-                    Our interest spans multiple diagnostic imaging modalities (CT, MRI, Ultrasound) and numerous
-                    diseases
-                    including:
+                    Risk stratification in oncology remains clinically challenging, with heterogeneity in outcomes among similarly staged patients. There is an increasing need for cost-effective biomarkers which accurately estimate cancer outcomes. Although molecular biomarkers have promise, they often require additional testing, specialized equipment, and fail to capture intra-tumoral heterogeneity. We are interested in studying the utility of deep learning methods to derive quantitative 'imaging-based biomarkers' from pretreatment diagnostic images that provide accurate personalized outcome estimates. Our interest spans multiple diagnostic imaging modalities (CT, MRI, Ultrasound) and numerous diseases including lung cancer, lymph nodes, gliomas, brain metastases, and cardiovascular disease.
                 </p>
-                <ul>
-                    <li>• Lung Cancer</li>
-                    <li>• Lymph Nodes</li>
-                    <li>• Gliomas</li>
-                    <li>• Brain Metastases</li>
-                    <li>• Cardiovascular Disease</li>
-                </ul>
                 <img class="responsive-img center-align" style="margin: 0 auto" src="../img/Projects/Biomarkers.png"
                     alt="Biomarkers Diagram">
+            </div>
+            <br>
+            <div>
+                <h5>Generalization of Deep Learning Models</h5>
+                <p>
+                    Deep learning models can easily overfit training data, failing to generalize to external validation sets. Our work investigates: (1) the generalizability of deep learning models when analyzing different types of healthcare data (imaging, clinical text, claims data); (2) methods to a priori identify models that generalize well; and (3) strategies to improve the generalizability of deep learning models across heterogeneous healthcare data streams.
+                </p>
+                <img class="responsive-img center-align" style="margin: 0 auto" src="../img/Projects/Generalization.png"
+                    alt="Generalization of Deep Learning Models Diagram">
             </div>
             <br>
             <div>
@@ -149,9 +104,9 @@
                 <p>
                     Although there is significant promise in the accuracy of deep learning models to classify diagnostic
                     images, a potential road-block in their clinical implementation is the lack of interpretable
-                    parameters which reveal the decision process underlying the deep learning model (the ‘black box
-                    problem’). We are interested in identifying methods to unpack the black box surrounding deep
-                    learning models and the impact such methods have on physician use of deep learning tools in clinical
+                    parameters about their decision processes (the 'black box'
+                    problem). We are interested in identifying methods to make deep learning models more interpretable
+                    and exploring the impact such methods have on physician use of deep learning tools in clinical
                     practice.
                 </p>
                 <img class="responsive-img center-align" style="margin: 0 auto"
@@ -159,74 +114,30 @@
             </div>
             <br>
             <div>
-                <h5>Metric Learning to Derive "Digital Twins"</h5>
+                <h5>Metric Learning to Identify "Digital Twins"</h5>
                 <p>
-                    Machine learning models transform data from an uninterpretable vector space to a more interpretable
-                    vector space that can be leveraged for classification/regression tasks. We are interested in further
-                    exploring the mapping of data to the interpretable vector space. We hope to identify similar data
-                    points within the interpretable vector space created from deep learning modeling of diagnostic
-                    images. Our goal is to identify similarity metrics which best match patients with similar outcomes.
-                    We call patients who are matched using our developed similarity metrics “digital twins”.
+                    Deep learning models transform high dimensional data into learned feature spaces 
+                    that capture meaningful patterns for tasks such as classification and regression. Our work explores 
+                    how these feature spaces can be used to identify patients with similar biological or clinical 
+                    characteristics. By developing and evaluating similarity metrics within these learned representations, 
+                    we aim to match patients with "Digital Twins" to enable personalized outcome predictions.
                 </p>
                 <img class="responsive-img center-align" style="margin: 0 auto" src="../img/Projects/DigitalTwins.png"
                     alt="Digital Twins Diagram">
             </div>
             <br>
             <div>
-                <h5>Generalization of Deep Learning Models</h5>
-                <p>
-                    Deep learning has shown the ability to model particularly complex distributions of data in
-                    healthcare. One concern remains the relative ease with which deep learning models over-fit to training
-                    data and fail to generalize on blinded external validation datasets. We are investigating 1) the
-                    generalizability of deep learning models when analyzing different types of healthcare data (imaging,
-                    clinical text, claims data); 2) methods to a priori identify models that do generalize well; and 3) ways
-                    to improve the generalizability of deep learning models across heterogenous healthcare data streams.
-                </p>
-                <img class="responsive-img center-align" style="margin: 0 auto" src="../img/Projects/Generalization.png"
-                    alt="Generalization of Deep Learning Models Diagram">
-            </div>
-            <div>
                 <h5>Physician and Patient Perception of Artificial Intelligence</h5>
                 <p>
-                    There is increasing interest in the potential utility of AI within healthcare. Clinical
-                    implementation of recently developed AI tools requires a better understanding of involved
+                    The clinical implementation of AI tools requires a better understanding of theinvolved
                     stakeholders (patients, physicians, etc.) and their perception of these emerging technologies.
-                    Through a collaboration with the Department of Health Policy at Weil Cornell Medical College, we are
-                    using mixed-method approaches to better understand patient and physician perceptions of AI including
-                    regulation, liability, and implementation.
+                    Through a collaboration with the Department of Health Policy at Weill Cornell Medical College, we are
+                    using mixed-method approaches to investigate patient and physician perceptions of AI including
+                    on topics of regulation, liability, and implementation.
                 </p>
                 <img class="responsive-img center-align" style="margin: 0 auto"
                     src="../img/Projects/Physician-Patient-Perception.png"
                     alt="Physician and Patient Perception of Artifical Intelligence Diagram">
-            </div>
-            <br>
-            <div>
-                <h5>Deep Learning Methods for Patient-Reported Outcome Capture</h5>
-                <p>
-                    Patient-reported outcome collection is associated with improved survival in cancer patients. PRO
-                    capture is often costly and lacking objectivity when scaled to larger patient populations. Our lab
-                    has developed a deep learning method to analyze audio data to generate semantic representation of
-                    patients' daily activities. We are investigating the correlation between these semantic
-                    representations and PROs as well as the ability to capture needed audio data using virtual assistant
-                    technology.
-                </p>
-                <img class="responsive-img center-align" style="margin: 0 auto"
-                    src="../img/Projects/Patient-Reported.png"
-                    alt="Deep Learning Methods for Patient Reported Outcome Capture Diagram">
-            </div>
-            <br>
-            <div>
-                <h5>Natural Language Processing for Clinical Trial Matching</h5>
-                <p>
-                    A barrier to clinical trial enrollment within oncology is lack of awareness of available/applicable
-                    randomized clinical trials by clinicians. With support from the National Science Foundation and in
-                    partnership with a physician-only question/answer website (The MedNet), we are investigating whether
-                    machine learning methods applied to clinician questions can effectively match them to available
-                    clinical trials.
-                </p>
-                <img class="responsive-img center-align" style="margin: 0 auto"
-                    src="../img/Projects/NLP.png"
-                    alt="Natural Language Processing for Clinical Trial Matching Diagram">
             </div>
             <br>
         </div>
@@ -250,6 +161,7 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="../js/nav.js"></script>
 
     <script>
         // Sidenav

@@ -135,9 +135,6 @@
           <a href="projects">Projects</a>
       </li>
       <li>
-          <a href="journal-club">News</a>
-      </li>
-      <li>
         <a href="../gallery/index.html">Gallery</a>
       </li>
       <li>

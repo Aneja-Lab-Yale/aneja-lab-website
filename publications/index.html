@@ -57,53 +57,24 @@
 <body id="home" class="scrollspy">
     <!-- Navbar -->
     <div class="yale-blue-background header-container">
-        <img class="responsive-img header-image" src="../img/New_Website_Banner.png" alt="">
         <div class="navigation">
             <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
             </a>
-            <ul class="hide-on-med-and-down">
-                <li><a href="../index.html#welcome">Home</a></li>
-                <li><a href="../people">People</a></li>
-                <li><a href="../projects">Projects</a></li>
-                <li class="active"><a href="#">Publications</a></li>
-                <li><a href="../journal-club">News</a></li>
-                <li><a href="../gallery/index.html">Gallery</a></li>
-                <li><a href="../join">Contact</a></li>
-                <li><a href="../support">Support</a></li>
-            </ul>
+            <ul class="hide-on-med-and-down"></ul>
         </div>
     </div>
-    <ul class="sidenav" id="mobile-nav">
-        <li>
-            <a href="../index.html#welcome">Home</a>
-        </li>
-        <li>
-            <a href="../people">People</a>
-        </li>
-        <li>
-            <a href="../projects">Projects</a>
-        </li>
-        <li class="active">
-            <a href="../publications/index.html">Publications</a>
-        </li>
-        <li>
-            <a href="../journal-club">News</a>
-        </li>
-        <li>
-            <a href="../gallery/index.html">Gallery</a>
-        </li>
-        <li>
-            <a href="../join">Contact</a>
-        </li>
-        <li>
-            <a href="../support">Support</a>
-        </li>
-    </ul>
+    <ul class="sidenav" id="mobile-nav"></ul>
 
     <!-- Section: Team -->
     <section id="team" class="section section-team scrollspy">
-        <div id="publication-container"></div>
+        <div class="container">
+            <h4>
+                Recent Work
+                <hr class="col s12 l6 offset-l3">
+            </h4>
+            <div id="publication-container"></div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -124,6 +95,7 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="../js/nav.js"></script>
 
     <script>
         // Sidenav
@@ -183,17 +155,34 @@
                         titleElement.target = '_blank';
                         titleElement.textContent = publication.title;
 
-                        const authorsElement = document.createElement('div');
-                        authorsElement.className = 'authors';
-                        authorsElement.textContent = publication.authors;
+                        const detailsElement = document.createElement('div');
+                        detailsElement.className = 'publication-details';
 
-                        const dateElement = document.createElement('div');
+                        const authorsElement = document.createElement('span');
+                        authorsElement.className = 'authors';
+                        // Truncate authors to first three and add "et al" if more than three
+                        let authorsText = publication.authors;
+                        const authorsList = publication.authors.split(',');
+                        if (authorsList.length > 3) {
+                            authorsText = authorsList.slice(0, 3).join(',') + ' et al.';
+                        }
+                        authorsElement.textContent = authorsText;
+
+                        const dateElement = document.createElement('span');
                         dateElement.className = 'date';
-                        dateElement.textContent = publication.date;
+                        // Format date as "Month Year" in parentheses, removing day numbers
+                        let monthPart = publication.date.replace(/\d{4}/, '').trim();
+                        monthPart = monthPart.replace(/\d+\s*/, ''); // Remove day numbers
+                        const year = publication.date.match(/\d{4}/)[0];
+                        // Remove extra space if no month
+                        const formattedDate = monthPart ? monthPart + ' ' + year : year;
+                        dateElement.textContent = formattedDate + '.';
+
+                        detailsElement.appendChild(authorsElement);
+                        detailsElement.appendChild(dateElement);
 
                         card.appendChild(titleElement);
-                        card.appendChild(authorsElement);
-                        card.appendChild(dateElement);
+                        card.appendChild(detailsElement);
 
                         publicationContainer.appendChild(card);
                     });

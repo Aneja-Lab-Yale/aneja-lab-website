@@ -1,3 +1,5 @@
+body { background-color: #f8f3f2; }
+
 .section-search input {
   padding: 5px !important;
   font-size: 18px !important;
@@ -13,8 +15,12 @@ html {
   font-family: 'yalenewroman', 'Times New Roman', Times, serif;
 }
 
+body {
+  background-color: white !important;
+}
+
 .yale-blue-background {
-  background-color: #00356B !important;
+  background-color: #1b3756 !important;
 }
 
 .yale-blue-text {
@@ -61,4 +67,323 @@ nav.nav-center ul li a {
 nav .sidenav-trigger i {
   height: 32px !important;
   line-height: 32px !important;
+}
+
+/* People page: circular photos and simple card layout */
+.person-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.person-photo-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.person-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+/* Alumni list: inherit body background instead of Materialize white */
+#alumniList .collection,
+#alumniList .collection .collection-item,
+#alumniList .collection .collection-header {
+  background-color: transparent !important;
+}
+
+/* Make the Aneja card extend to bottom of figures */
+.section-philosophy .col.l4 .card {
+  height: 32.6rem; /* Elongate the card responsively to align with figures */
+  border-radius: 0 !important; /* Sharp edges */
+}
+
+/* Make Aneja photo smaller on wider screens */
+@media (min-width: 1200px) {
+  img.responsive-img {
+    max-height: 300px !important;
+    width: auto !important;
+    object-fit: cover !important;
+  }
+  
+  /* Constrain Aneja card width on wide screens */
+  .card.center {
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Make Aneja photo smaller on wider screens */
+@media (min-width: 1500px) {
+  
+  /* Add more white space before main content on home page */
+  .section-philosophy {
+    margin-top: 4rem !important;
+  }
+}
+
+
+/* Mobile layout changes for home page */
+@media (max-width: 992px) {
+  /* Override the 5rem margins on the section div */
+  .section-philosophy > div {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
+  
+  /* Make Aneja card wider on mobile */
+  .section-philosophy .col.l4 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Stack Welcome text and figures below Aneja card */
+  .section-philosophy .col.l6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    float: none !important;
+  }
+  
+  /* Adjust row layout for mobile */
+  .section-philosophy .row {
+    flex-direction: column !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Make Welcome text smaller on mobile */
+  .section-philosophy h4 {
+    font-size: 2rem !important;
+  }
+  
+  /* Make figures display in single column on mobile */
+  .research-figures {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+  
+  .figure-container {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+}
+
+/* Make all cards have sharp edges */
+.card {
+  border-radius: 0 !important;
+}
+
+/* Make footer stick to bottom of screen */
+body {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+main {
+  flex: 1 !important;
+}
+
+footer {
+  margin-top: auto !important;
+}
+
+/* Override Materialize section backgrounds */
+.section {
+  background-color: white !important;
+}
+
+/* Override any Materialize grey backgrounds */
+.grey.lighten-4 {
+  background-color: white !important;
+}
+
+/* Center the welcome text paragraph using flexbox and add top spacing to match People page */
+.section-philosophy {
+  padding-top: 2.5rem !important; /* Add more spacing after nav bar */
+}
+
+.section-philosophy .row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* Changed from space-between */
+  gap: 2rem; /* Add space between card and paragraph */
+}
+
+.section-philosophy .col.l6 {
+  text-align: justify; /* Justify text to fill the width */
+  flex: 0 0 70%; /* Make it wider to match image width */
+  margin-left: 4rem; /* Adjust left margin for wider text */
+  margin-top: -1.6rem; /* Move everything up more */
+  max-width: 48rem; /* Match the width of three images (15rem each + 2 gaps) */
+  margin-right: auto; /* Center the column within its flex container */
+}
+
+/* Align publications with the gray line */
+#publication-container {
+  margin-left: 0%; /* Align with left edge of centered gray line (offset-l3 = 25%) */
+  margin-right: 0%; /* Align with right edge of centered gray line */
+  max-width: 100%; /* Match the width of the gray line (l6 = 50%) */
+  box-shadow: none !important; /* Remove box shadow */
+  border: none !important; /* Remove border */
+  outline: none !important; /* Remove outline */
+}
+
+/* Remove borders and outlines from publication items */
+#publication-container * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove grey background from publication cards */
+#publication-container .card {
+    background-color: transparent !important;
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
+}
+
+/* Style publication titles */
+#publication-container .title {
+  color: black !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  display: inline !important; /* Remove line break after title */
+  text-decoration: none !important; /* Remove underline */
+}
+
+/* Make publication titles bolder on large screens */
+@media (min-width: 1200px) {
+  #publication-container .title {
+    font-weight: 900 !important;
+  }
+}
+
+/* Style publication details container */
+#publication-container .publication-details {
+  display: inline !important; /* Keep on same line as title */
+}
+
+/* Style publication authors */
+#publication-container .authors {
+  font-size: 1rem !important; /* Same font size as title */
+  display: inline !important; /* Keep on same line */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Style publication date */
+#publication-container .date {
+    font-size: 1rem !important; /* Same font size as title and authors */
+    display: inline !important; /* Keep on same line */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Make publication elements span full width */
+#publication-container .card {
+    width: 100% !important;
+}
+
+#publication-container .title {
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    margin-right: 0rem !important;
+    padding-right: 0rem;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Constrain title width to not extend too far right */
+#publication-container .title.yale-blue-text {
+    max-width: 90% !important;
+}
+
+#publication-container .publication-details {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+}
+
+/* Justify text in project sections and add top spacing to match People page */
+.section-team {
+  padding-top: 1.5rem !important; /* Reduced spacing to h4 headings */
+}
+
+.section-team p {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  word-spacing: 0.05em !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.5 !important;
+}
+
+/* Hide GitHub button on projects page */
+.btn.yale-blue-background[href*="github"] {
+  display: none !important;
+}
+.justified-text {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  word-spacing: 0.05em !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.5 !important;
+  font-size: 1.3rem !important;
+  margin: 0 !important;
+  margin-top: 0rem !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.section-philosophy .col.l6 p {
+  margin: 0; /* Remove auto margins */
+  margin-top: 0rem; /* Move paragraph closer to h4 */
+  line-height: 1.4;
+  font-size: 1.3rem; /* Reduced font size */
+  max-width: 100%; /* Ensure paragraph doesn't exceed container */
+}
+
+.section-philosophy .col.l6 h4 {
+  font-size: 2.2rem; /* Reduced font size */
+  font-weight: 400; /* Make the font weight even heavier */
+}
+
+/* Research Figures Styling */
+.research-figures {
+  display: flex;
+  flex-direction: row; /* Horizontal alignment */
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center; /* Center the row */
+}
+
+.figure-container {
+  text-align: center;
+}
+
+.research-fig {
+  width: 15rem; /* Smaller width */
+  height: 11.25rem; /* Smaller height */
+  object-fit: contain; /* Show entire image without cropping */
+  border-radius: 0; /* Sharp edges */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Darker shadow */
 }

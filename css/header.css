@@ -1,25 +1,25 @@
 .header-container {
     position: relative;
     text-align: center;
+    min-height: 3.75rem; /* Ensure visible height when header image is hidden */
+    padding-top: 0rem; /* Add white space at top of nav bar */
 }
 
 .header-image {
-    max-height: 300px; /* Adjust this value as needed */
-    width: auto;
-    
+    display: none; /* Remove banner image behind the nav bar */
 }
 
 .navigation {
     position: absolute;
     top: 0px;
-    left: 40%;
-    background-color: #1b37569f;
-    padding: 0px;
+    left: 0%;
+    background-color: #1b3756; /* Yale blue background */
+    padding: 0rem 12px 0 12px; /* Add top padding for white space */
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* space between logo and nav links */
     align-items: center;
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    height: 3.75rem; /* Original height */
 }
 
 .navigation ul {
@@ -27,19 +27,85 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 0px;
-    font-size: 27px;
+    gap: 12px; /* spacing between nav links */
+    font-size: 14px; /* base: mobile */
+    position: relative; /* For the underline */
 }
+
 
 .navigation li {
     margin: 0;
 }
 .navigation a {
-    color: white;
+    color: white; /* White color for contrast against Yale blue */
     text-decoration: none;
     padding: 5px 5px;
 }
 
+.navigation a:hover {
+    color: #E6F3FF; /* Light blue hover for visibility on Yale blue */
+}
+
+/* Logo styling */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Add left margin to move logo left */
+    margin-top: -3px; /* Move logo and text back up a bit */
+}
+
+.logo-img {
+    height: 40px; /* Reduced from 130px */
+    width: auto;
+    max-width: 300px; /* Reduced max width */
+    object-fit: contain; /* Maintain aspect ratio */
+    object-position: left; /* Align to left */
+    margin-top: 8px; /* Move logo down more */
+}
+
+.nav-logo a {
+    display: block;
+    padding: 0;
+}
+
+.nav-logo a:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.logo-text {
+    margin-left: 10px; /* Space between logo and text */
+    font-size: 36px; /* Increased font size */
+    font-weight: 400; /* Make text bold */
+    color: white; /* White color for contrast against Yale blue background */
+    vertical-align: middle; /* Align with logo */
+    font-family: 'yalenewroman', 'Times New Roman', Times, serif; /* Ensure Yale font */
+}
+
+
+/* Mobile dropdown menu positioned on right */
+@media (max-width: 992px) {
+    .sidenav {
+        right: 0 !important;
+        left: auto !important;
+        width: 300px !important;
+        background-color: #1b3756 !important;
+        transform: translateX(100%) !important;
+    }
+    
+    .sidenav.sidenav-fixed {
+        transform: translateX(0) !important;
+    }
+    
+    .sidenav li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .sidenav a {
+        color: white !important;
+        padding: 1rem 1.5rem !important;
+    }
+}
 
 @media only screen and (min-width: 993px) {
     .navigation a.sidenav-trigger {
@@ -49,21 +115,49 @@
 
 @media (min-width:993px) {
     .navigation ul {
-        font-size: 15px;
+        font-size: 16px; /* medium screens */
     }
 }
 @media (min-width:1162px) {
     .navigation ul {
-        font-size: 21px;
+        font-size: 18px; /* large screens */
+    }
+    .navigation {
+        padding-right: 24px; /* add more right spacing on large screens */
     }
 }
 @media (min-width:1330px) {
     .navigation ul {
-        font-size: 27px;
+        font-size: 18px; /* keep comfortable size */
+    }
+    .navigation {
+        padding-right: 32px; /* wider screens */
     }
 }
 @media (min-width:1468px) {
     .navigation ul {
-        font-size: 33px;
+        font-size: 18px; /* extra-large screens */
+    }
+    .navigation {
+        padding-right: 20px; /* extra-large screens */
+    }
+}
+
+/* Mobile responsive logo */
+@media (max-width: 992px) {
+    .logo-img {
+        height: 30px; /* Reduced from 95px */
+        max-width: 250px; /* Reduced max width for mobile */
+        object-fit: contain; /* Maintain aspect ratio */
+        object-position: left; /* Align to left */
+    }
+    
+    .logo-text {
+        font-size: 25px; /* Smaller text on mobile */
+        margin-left: 10px; /* Less space on mobile */
+    }
+    
+    .navigation {
+        padding: 0 8px 0 8px; /* Reduce padding on mobile */
     }
 }
