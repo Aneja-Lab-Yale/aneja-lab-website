@@ -98,23 +98,90 @@ nav .sidenav-trigger i {
 }
 
 /* Make the Aneja card extend to bottom of figures */
-.section-philosophy .col.l4 .card {
+.section-philosophy .col.l5 .card {
   height: 32.6rem; /* Elongate the card responsively to align with figures */
   border-radius: 0 !important; /* Sharp edges */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* Vertically center the image within the card */
+.section-philosophy .col.l5 .card img.responsive-img {
+  align-self: center !important;
+}
+
+/* Make card content text bigger and bold */
+.section-philosophy .col.l5 .card .card-content p {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+}
+
+/* Make "Aneja Lab" text larger */
+.section-philosophy .col.l5 .card .card-content p:first-child {
+  font-size: 1.45rem !important;
+  font-weight: 500 !important;
+}
+
+/* Remove vertical padding from card-content */
+.section-philosophy .col.l5 .card .card-content {
+  padding-top: 1rem !important;
+  padding-bottom: 0 !important;
+}
+
+/* Align columns to the top */
+.section-philosophy .row {
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+/* Ensure both columns align properly - remove any top spacing */
+.section-philosophy .col.l5,
+.section-philosophy .col.l7 {
+  align-self: flex-start !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Remove vertical padding/margin from Welcome heading */
+.section-philosophy .col.l7 h4 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0.3rem !important;
 }
 
 /* Make Aneja photo smaller on wider screens */
 @media (min-width: 1200px) {
-  img.responsive-img {
+  .section-philosophy .card.center img.responsive-img {
     max-height: 300px !important;
-    width: auto !important;
+    max-width: 85% !important;
+    width: 85% !important;
     object-fit: cover !important;
   }
   
-  /* Constrain Aneja card width on wide screens */
-  .card.center {
-    max-width: 400px !important;
+  /* Allow Aneja card to use full column width on wide screens */
+  .section-philosophy .card.center {
+    max-width: none !important;
     margin: 0 auto !important;
+  }
+  
+  /* Constrain paragraph text width to match figures width */
+  .section-philosophy .col.l7 .justified-text {
+    max-width: 47rem !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Center align the heading and paragraph container */
+  .section-philosophy .col.l7 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .section-philosophy .col.l7 h4 {
+    width: 100%;
+    max-width: 47rem !important;
   }
 }
 
@@ -257,6 +324,15 @@ footer {
     background-color: transparent !important;
     margin: 0 0 1rem 0 !important;
     padding: 0 !important;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Highlight target publication when scrolled to */
+#publication-container .card:target,
+#publication-container .card.highlighted {
+    background-color: #f0f8ff !important;
+    border-left: 4px solid #00356B !important;
+    padding-left: 1rem !important;
 }
 
 /* Style publication titles */
@@ -264,7 +340,7 @@ footer {
   color: black !important;
   font-size: 1rem !important;
   font-weight: bold !important;
-  display: inline !important; /* Remove line break after title */
+  display: inline-block !important; /* Keep title inline-block to allow width constraint */
   text-decoration: none !important; /* Remove underline */
 }
 
@@ -301,19 +377,41 @@ footer {
     width: 100% !important;
 }
 
+/* Title container styling - allow title and icon to be inline */
 #publication-container .title {
-    width: 100% !important;
-    display: block !important;
+    display: inline !important;
     margin: 0 !important;
-    margin-right: 0rem !important;
     padding-right: 0rem;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
 }
 
-/* Constrain title width to not extend too far right */
-#publication-container .title.yale-blue-text {
+/* Style title container to hold title and icon */
+#publication-container .title-container {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    line-height: 1.5 !important; /* Set line height for better text flow */
+    white-space: normal !important; /* Allow wrapping */
+}
+
+/* Style the wrapper that contains title and icon */
+#publication-container .title-container > span {
+    display: inline-block !important;
     max-width: 90% !important;
+    vertical-align: top !important;
+}
+
+/* Style link icon - keep it inline so it flows with text */
+#publication-container .card a {
+    display: inline !important;
+    vertical-align: baseline !important; /* Align to baseline so icon flows with text */
+    white-space: nowrap !important; /* Prevent icon from wrapping alone */
+}
+
+#publication-container .card a img {
+    display: inline !important;
+    vertical-align: baseline !important; /* Align to baseline so icon appears after last word */
 }
 
 #publication-container .publication-details {
@@ -386,4 +484,16 @@ footer {
   object-fit: contain; /* Show entire image without cropping */
   border-radius: 0; /* Sharp edges */
   box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Darker shadow */
+}
+
+/* Make figure links clickable */
+.figure-container a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.figure-container a:hover .research-fig {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }

@@ -10,6 +10,9 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/aneja-lab-logo.png">
+    <link rel="shortcut icon" type="image/png" href="../img/aneja-lab-logo.png">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <!-- For Custom Font (Yale Type Face) -->
@@ -44,13 +47,13 @@
                         <i class="material-icons">chevron_right</i>
                     </button>
                     
-                    <div class="gallery-image-container">
-                        <img id="gallery-image" src="../img/gallery/Gallery_01.jpg" alt="Gallery Image" class="responsive-img">
+                    <div class="gallery-image-container" id="gallery-slide">
+                        <!-- Images will be dynamically inserted here -->
                     </div>
                     
                     <!-- Image Counter -->
                     <div class="gallery-counter">
-                        <span id="current-image">1</span> / <span id="total-images">19</span>
+                        <span id="current-slide">1</span> / <span id="total-slides">5</span>
                     </div>
                 </div>
             </div>
@@ -86,7 +89,7 @@
                 '../img/gallery/Gallery_04.jpg',
                 '../img/gallery/Gallery_05.jpg',
                 '../img/gallery/Gallery_06.jpg',
-                '../img/gallery/Gallery_07.jpg',
+                '../img/gallery/Gallery_07.jpeg',
                 '../img/gallery/Gallery_08.jpg',
                 '../img/gallery/Gallery_09.jpeg',
                 '../img/gallery/Gallery_10.jpg',
@@ -98,42 +101,89 @@
                 '../img/gallery/Gallery_16.JPG',
                 '../img/gallery/Gallery_17.jpg',
                 '../img/gallery/Gallery_18.jpeg',
-                '../img/gallery/Gallery_19.jpeg'
+                '../img/gallery/Gallery_19.jpg'
             ];
             
-            let currentImageIndex = 0;
-            const galleryImage = document.getElementById('gallery-image');
-            const currentImageSpan = document.getElementById('current-image');
+            // Group images into slides: 4 images for first 4 slides, 3 for last
+            const slides = [];
+            const imagesPerSlide = 4;
+            const totalImages = images.length;
+            
+            // Create first 4 slides with 4 images each
+            for (let i = 0; i < Math.min(16, totalImages); i += imagesPerSlide) {
+                const slideImages = images.slice(i, i + imagesPerSlide);
+                if (slideImages.length > 0) {
+                    slides.push(slideImages);
+                }
+            }
+            
+            // Add remaining images as the last slide (should be 3 images: 17-19)
+            if (totalImages > 16) {
+                const remainingImages = images.slice(16);
+                if (remainingImages.length > 0) {
+                    slides.push(remainingImages);
+                }
+            }
+            
+            let currentSlideIndex = 0;
+            const gallerySlide = document.getElementById('gallery-slide');
+            const currentSlideSpan = document.getElementById('current-slide');
+            const totalSlidesSpan = document.getElementById('total-slides');
             const prevBtn = document.getElementById('prev-btn');
             const nextBtn = document.getElementById('next-btn');
             
-            function updateImage() {
-                galleryImage.src = images[currentImageIndex];
-                currentImageSpan.textContent = currentImageIndex + 1;
+            totalSlidesSpan.textContent = slides.length;
+            
+            function updateSlide() {
+                // Clear current slide
+                gallerySlide.innerHTML = '';
+                gallerySlide.classList.remove('three-images');
+                
+                // Get images for current slide
+                const slideImages = slides[currentSlideIndex];
+                
+                // Add class if this is a 3-image slide
+                if (slideImages.length === 3) {
+                    gallerySlide.classList.add('three-images');
+                }
+                
+                // Create image elements
+                slideImages.forEach(imageSrc => {
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.alt = 'Gallery Image';
+                    img.className = 'gallery-grid-image';
+                    gallerySlide.appendChild(img);
+                });
+                
+                currentSlideSpan.textContent = currentSlideIndex + 1;
             }
             
-            function showNextImage() {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                updateImage();
+            function showNextSlide() {
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                updateSlide();
             }
             
-            function showPrevImage() {
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                updateImage();
+            function showPrevSlide() {
+                currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                updateSlide();
             }
             
             // Event listeners
-            nextBtn.addEventListener('click', showNextImage);
-            prevBtn.addEventListener('click', showPrevImage);
+            nextBtn.addEventListener('click', showNextSlide);
+            prevBtn.addEventListener('click', showPrevSlide);
             
             // Keyboard navigation
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'ArrowRight') {
-                    showNextImage();
+                    showNextSlide();
                 } else if (e.key === 'ArrowLeft') {
-                    showPrevImage();
+                    showPrevSlide();
                 }
             });
+            
+            // Initialize first slide
+            updateSlide();
         });
     </script>
     
@@ -156,8 +206,10 @@
         .gallery-image-container {
             text-align: center;
             margin-bottom: 30px;
-            height: 500px;
-            display: flex;
+            min-height: 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
             align-items: center;
             justify-content: center;
             background-color: #f8f9fa;
@@ -165,14 +217,25 @@
             padding: 20px;
         }
         
-        .gallery-image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
+        .gallery-grid-image {
+            width: 100%;
             height: auto;
-            object-fit: contain;
-            border-radius: 8px; /* Curved edges for photos */
+            max-height: 240px;
+            object-fit: cover;
+            border-radius: 0px; /* Sharp edges */
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+        
+        /* For slides with 3 images, center the last one */
+        .gallery-image-container.three-images {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .gallery-image-container.three-images .gallery-grid-image:last-child {
+            grid-column: 1 / -1;
+            max-width: 75%;
+            margin: 0 auto;
         }
         
         .gallery-btn {
@@ -227,8 +290,18 @@
             }
             
             .gallery-image-container {
-                height: 350px;
+                min-height: 350px;
+                grid-template-columns: 1fr;
+                gap: 10px;
                 padding: 15px;
+            }
+            
+            .gallery-grid-image {
+                max-height: 300px;
+            }
+            
+            .gallery-image-container.three-images .gallery-grid-image:last-child {
+                max-width: 100%;
             }
             
             .gallery-btn {
