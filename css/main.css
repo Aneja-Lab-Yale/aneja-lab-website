@@ -99,11 +99,12 @@ nav .sidenav-trigger i {
 
 /* Make the Aneja card extend to bottom of figures */
 .section-philosophy .col.l5 .card {
-  height: 32.6rem; /* Elongate the card responsively to align with figures */
+  height: 25.6rem; /* Elongate the card responsively to align with figures */
   border-radius: 0 !important; /* Sharp edges */
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
+  padding-top: 2rem !important;
 }
 
 /* Vertically center the image within the card */
@@ -121,11 +122,12 @@ nav .sidenav-trigger i {
 .section-philosophy .col.l5 .card .card-content p:first-child {
   font-size: 1.45rem !important;
   font-weight: 500 !important;
+  margin-top: 0.75rem !important;
 }
 
 /* Remove vertical padding from card-content */
 .section-philosophy .col.l5 .card .card-content {
-  padding-top: 1rem !important;
+  padding-top: 0rem !important;
   padding-bottom: 0 !important;
 }
 
@@ -139,8 +141,13 @@ nav .sidenav-trigger i {
 .section-philosophy .col.l5,
 .section-philosophy .col.l7 {
   align-self: flex-start !important;
-  margin-top: 0 !important;
+  margin-top: 0rem !important;
   padding-top: 0 !important;
+}
+
+/* Move the Aneja lab card down */
+#aneja-lab-card {
+  margin-top: 4.5rem !important;
 }
 
 /* Remove vertical padding/margin from Welcome heading */
