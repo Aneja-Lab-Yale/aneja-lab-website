@@ -97,9 +97,10 @@ nav .sidenav-trigger i {
   background-color: transparent !important;
 }
 
-/* Make the Aneja card extend to bottom of figures */
+/* Aneja card: min height on desktop; grows with column on wide screens (see media query) */
 .section-philosophy .col.l5 .card {
-  height: 25.6rem; /* Elongate the card responsively to align with figures */
+  min-height: 25.6rem;
+  height: auto;
   border-radius: 0 !important; /* Sharp edges */
   display: flex !important;
   flex-direction: column !important;
@@ -148,6 +149,28 @@ nav .sidenav-trigger i {
 /* Move the Aneja lab card down */
 #aneja-lab-card {
   margin-top: 4.5rem !important;
+}
+
+/* Wide screens: stretch columns so the center card matches the height of Welcome + figures */
+@media (min-width: 993px) {
+  .section-philosophy .row {
+    align-items: stretch !important;
+  }
+
+  .section-philosophy .col.l5,
+  .section-philosophy .col.l7 {
+    align-self: stretch !important;
+  }
+
+  #aneja-lab-card.col.l5 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .section-philosophy .col.l5 .card {
+    flex: 1 1 auto !important;
+    min-height: 25.6rem !important;
+  }
 }
 
 /* Remove vertical padding/margin from Welcome heading */
@@ -209,15 +232,38 @@ nav .sidenav-trigger i {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
   }
+
+  /* Aneja center card: fixed desktop height leaves empty space on mobile */
+  .section-philosophy .col.l5 .card {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .section-philosophy .col.l5 .card .card-content {
+    padding-bottom: 0.75rem !important;
+  }
+
+  #aneja-lab-card {
+    margin-top: 1rem !important;
+  }
+
+  /* Slightly tighter photo on narrow screens */
+  .section-philosophy .card.center img.responsive-img {
+    max-width: 75% !important;
+  }
   
-  /* Make Aneja card wider on mobile */
-  .section-philosophy .col.l4 {
+  /* Make Aneja card column full width on mobile (matches col s12 l5) */
+  .section-philosophy .col.l4,
+  .section-philosophy .col.l5 {
     width: 100% !important;
     max-width: 100% !important;
   }
   
   /* Stack Welcome text and figures below Aneja card */
-  .section-philosophy .col.l6 {
+  .section-philosophy .col.l6,
+  .section-philosophy .col.l7 {
     width: 100% !important;
     max-width: 100% !important;
     margin-top: 0 !important;
@@ -439,6 +485,67 @@ footer {
   word-spacing: 0.05em !important;
   letter-spacing: 0.01em !important;
   line-height: 1.5 !important;
+}
+
+/* Support page: funder logos — desktop 3-column grid; mobile one per row, even gaps */
+.section-support .support-intro {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  text-align: left !important;
+  text-justify: auto !important;
+}
+
+.section-support .support-funders {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  row-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+.section-support .support-funder-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.section-support .support-funder-logo {
+  max-height: 120px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Center the lone logo on the last row (desktop / tablet grid) */
+.section-support .support-funder-item:nth-child(7) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: min(100%, 400px);
+}
+
+@media (max-width: 992px) {
+  .section-support .support-funders {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    row-gap: 1.5rem;
+    column-gap: 0;
+  }
+
+  .section-support .support-funder-item:nth-child(7) {
+    grid-column: auto;
+    justify-self: stretch;
+    max-width: none;
+  }
 }
 
 /* Hide GitHub button on projects page */

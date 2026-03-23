@@ -78,40 +78,34 @@
     <ul class="sidenav" id="mobile-nav"></ul>
 
     <!-- Section: Team -->
-    <section id="team" class="section section-team scrollspy">
+    <section id="team" class="section section-team section-support scrollspy">
         <div class="container">
             <h4>
                 Support
                 <hr class="col s12 l6 offset-l3">
             </h4>
-            <p style="font-size: 1.2rem; margin-bottom: 3rem;">The Aneja Lab is fortunate to receive funding from the following organizations:</p>
-            <div class="row" style="margin-bottom: 2rem;">
-                <div class="col s12 m4 l4" style="padding: 0 1rem; text-align: center;">
-                    <img class="responsive-img" src="../img/Support/AHRQ_Logo.jpeg" alt="" style="max-height: 120px; width: auto; object-fit: contain;">
+            <p class="support-intro">The Aneja Lab is fortunate to receive funding from the following organizations:</p>
+            <div class="support-funders" role="list">
+                <div class="support-funder-item" role="listitem">
+                    <img class="responsive-img support-funder-logo" src="../img/Support/AHRQ_Logo.jpeg" alt="AHRQ">
                 </div>
-                <div class="col s12 m4 l4" style="padding: 0 1rem; text-align: center;">
-                    <img class="responsive-img" src="../img/Support/American_Cancer_Society_Logo.png" alt="" style="max-height: 120px; width: auto; object-fit: contain;">
+                <div class="support-funder-item" role="listitem">
+                    <img class="responsive-img support-funder-logo" src="../img/Support/American_Cancer_Society_Logo.png" alt="American Cancer Society">
                 </div>
-                <div class="col s12 m4 l4" style="padding: 0 1rem; text-align: center;">
-                    <img class="responsive-img" src="../img/Support/ASCO_Logo.jpg" alt="" style="max-height: 120px; width: auto; object-fit: contain;">
+                <div class="support-funder-item" role="listitem">
+                    <img class="responsive-img support-funder-logo" src="../img/Support/ASCO_Logo.jpg" alt="ASCO">
                 </div>
-            </div>
-            <br>
-            <div class="row" style="margin-bottom: 2rem;">
-                <div class="col s12 m4 l4" style="padding: 0 1rem; text-align: center;">
-                    <img class="responsive-img" src="../img/Support/NSF_Logo.jpg" alt="" style="max-height: 120px; width: auto; object-fit: contain;">
+                <div class="support-funder-item" role="listitem">
+                    <img class="responsive-img support-funder-logo" src="../img/Support/NSF_Logo.jpg" alt="National Science Foundation">
                 </div>
-                <div class="col s12 m4 l4" style="padding: 0 1rem; text-align: center;">
-                    <img class="responsive-img" src="../img/Support/rsna-refoundation-logo.png" alt="" style="max-height: 120px; width: auto; object-fit: contain;">
+                <div class="support-funder-item" role="listitem">
+                    <img class="responsive-img support-funder-logo" src="../img/Support/rsna-refoundation-logo.png" alt="RSNA R&E Foundation">
                 </div>
-                <div class="col s12 m4 l4" style="padding: 0 1rem; text-align: center;">
-                    <img class="responsive-img" src="../img/Support/Yale_Cancer_Center_Logo.png" alt="" style="max-height: 120px; width: auto; object-fit: contain;">
+                <div class="support-funder-item" role="listitem">
+                    <img class="responsive-img support-funder-logo" src="../img/Support/Yale_Cancer_Center_Logo.png" alt="Yale Cancer Center">
                 </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col s12 m4 l4 offset-m4 offset-l4" style="padding: 0 1rem; text-align: center;">
-                    <img class="responsive-img" src="../img/Support/YCCI_Logo.jpg" alt="" style="max-height: 120px; width: auto; object-fit: contain;">
+                <div class="support-funder-item" role="listitem">
+                    <img class="responsive-img support-funder-logo" src="../img/Support/YCCI_Logo.jpg" alt="Yale Cancer Center Institute">
                 </div>
             </div>
             <p class="flow white-text" style="visibility: hidden;">
@@ -147,9 +141,7 @@
     <script src="../js/nav.js"></script>
 
     <script>
-        // Sidenav
-        const sideNav = document.querySelector('.sidenav');
-        M.Sidenav.init(sideNav, {});
+        // Sidenav is initialized in js/nav.js after links are injected
 
         // Slider
         const slider = document.querySelector('.slider');

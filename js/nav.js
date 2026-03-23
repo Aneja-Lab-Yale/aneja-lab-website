@@ -66,6 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initialize sidenav after injection
   if (window.M && mobileNav) {
-    M.Sidenav.init(mobileNav, {});
+    M.Sidenav.init(mobileNav, { edge: 'right' });
   }
 });
